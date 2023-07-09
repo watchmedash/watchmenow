@@ -59,7 +59,7 @@ a {
   max-width: 100%;
 }
 
-.form-wrapper #search {
+.form-wrapper #myInput {
   border: 1px solid #CCC;
   -webkit-box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #FFF;
   -moz-box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #FFF;
@@ -75,7 +75,7 @@ a {
   width: 320px;
 }
 
-.form-wrapper #search:focus {
+.form-wrapper #myInput:focus {
   border-color: #aaa;
   -webkit-box-shadow: 0 1px 1px #bbb inset;
   -moz-box-shadow: 0 1px 1px #bbb inset;
@@ -83,9 +83,9 @@ a {
   outline: 0;
 }
 
-.form-wrapper #search:-moz-placeholder,
-.form-wrapper #search:-ms-input-placeholder,
-.form-wrapper #search::-webkit-input-placeholder {
+.form-wrapper #myInput:-moz-placeholder,
+.form-wrapper #myInput:-ms-input-placeholder,
+.form-wrapper #myInput::-webkit-input-placeholder {
   color: #999;
   font-weight: normal;
 }
@@ -215,10 +215,10 @@ a {
 
 
   <form class="form-wrapper">
-    <hr>
+    
   <strong><h1>Search Movie</h1> </strong>
     
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter Movie Title..">
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter Movie Title.."> <input type="submit" value="go" id="submit">
 
 <table id="myTable">
 <tr class="header">
