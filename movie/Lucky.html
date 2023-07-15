@@ -21,14 +21,11 @@
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
   <link rel="preload" as="style" href="../assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="../assets/mobirise/css/mbr-additional.css" type="text/css">
-
+<link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
 
 
 <style>
-video {
-  width: 100%;
-  height: auto;
-}
+
 </style>
 
 </head>
@@ -65,12 +62,30 @@ video {
 
 </section>
 
-<video width="400" controls>
-  <source src="https://sto138.akamai-video-content.com/tysxeq2byc46j6cdabcczwctgb4ffqgfvpc4hvvwgiuitvzmzkfw5beto4uq/Cocaine_Bear.mp4" type="video/mp4">
-  Your browser does not support HTML5 video.
-</video>
   
+  <video
+    id="my-video"
+    class="video-js"
+    controls
+    preload="auto"
+    width="640"
+    height="264"
+    poster="MY_VIDEO_POSTER.jpg"
+    data-setup="{}"
+  >
+    <source src="MY_VIDEO.mp4" type="video/mp4" />
+    <source src="MY_VIDEO.webm" type="video/webm" />
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank"
+        >supports HTML5 video</a
+      >
+    </p>
+  </video>
 
+  <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
+  
 <section data-bs-version="5.1" class="footer3 cid-s48P1Icc8J" once="footers" id="footer3-i">
 
 
