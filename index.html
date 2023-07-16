@@ -36,6 +36,36 @@
 
 
   <style>
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #e40404;
+  color: white;
+}
+	  
 img {
   max-width: 100%;
   height: auto;
@@ -110,10 +140,12 @@ img {
                     <span></span>
                 </div>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item dropdown"><a class="nav-link link text-black dropdown-toggle display-4" href="index.html" data-toggle="dropdown-submenu" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false"></a><div class="dropdown-menu" aria-labelledby="dropdown-600"><a class="text-black dropdown-item display-4" href="Search Movie.html">Search Movie<br></a><a class="text-black show dropdown-item display-4" href="Contact Us.html">Contact Us</a><a class="text-black show dropdown-item display-4" href="DMCA.html">DMCA</a></div></li></ul>
-                   
-            </div>
+<div class="topnav">
+  <a class="active" href="https://watchmenow.live/">Home</a>
+  <a href="../Search Movie.html">Search Movie</a>
+  <a href="../Contact Us.html">Contact Us</a>
+  <a href="../DMCA.html">DMCA</a>
+</div>
         </div>
     </nav>
 
