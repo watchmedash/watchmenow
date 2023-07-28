@@ -517,16 +517,16 @@ footer {
 
 .footer-nav {
   display: flex;
-  justify-content: space-between;
-  flex-direction: column; /* This line makes the items stack vertically */
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .footer-links,
 .social-icons {
-  width: 100%;
+  display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  width: 100%; // Add this
 }
 
 .footer-links li {
