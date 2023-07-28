@@ -513,6 +513,8 @@ footer {
   width: 100%;
   bottom: 0; /* Position the footer at the bottom */
   left: 0;
+  box-sizing: border-box;
+  overflow: auto;
 }
 
 .footer-nav {
@@ -520,6 +522,9 @@ footer {
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: auto;
 }
 
 .footer-links {
@@ -585,7 +590,7 @@ footer {
   }
 
   .footer-links a {
-    font-size: 16px; /* Adjust the font size for smaller screens */
+     font-size: clamp(16px, 1.5vw, 32px);
   }
 }
 
