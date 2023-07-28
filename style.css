@@ -558,6 +558,7 @@ footer {
 .social-icons {
   display: flex;
   margin-top: 10px;
+  overflow: auto;
 }
 
 .social-icons a {
