@@ -1,0 +1,713 @@
+/* Add the following styles to center the search container */
+.search-container {
+  margin-top: 20px;
+  text-align: center;
+  max-width: 80%; /* Set the maximum width to 70% of the screen */
+  margin: 0 auto; /* Center the search container horizontally */
+  margin-bottom: 0; /* Remove the margin at the bottom */
+}
+
+/* Add styles for the search bar and icon */
+.search-container form {
+  padding: 8px; /* Add desired padding */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  display: flex;
+  width: 80%;
+  margin: 10px auto;
+}
+
+.search-container input {
+  flex: 1;
+  padding: 8px 10px; /* Adjust padding as needed */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: 'Exo 2', sans-serif;
+}
+
+.search-container button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 8px;
+  cursor: pointer;
+  position: absolute;
+  right: 5px;
+}
+
+/* Style the search icon using Font Awesome */
+.search-container button i {
+  font-size: 20px;
+  color: red;
+
+}
+
+/* Additional CSS code for the search results */
+#searchResults {
+  position: absolute;
+    z-index: 1000;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+  display: none;
+  width: 62%;
+  margin: 0 auto; /* Center the search results horizontally */
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 1); /* Add some transparency to the background */
+  border-radius: 5px;
+  color: red; /* Set the font color to red */
+  font-family: 'Exo 2', sans-serif; /* Apply the "Exo 2" font to the search results */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+
+#searchResults ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#searchResults li {
+  margin-bottom: 5px;
+}
+
+#searchResults a {
+  font-weight: bold;
+  text-decoration: none;
+  color: red; /* Set the font color of the links to red */
+  font-family: 'Exo 2', sans-serif; /* Apply the "Exo 2" font to the list items */
+}
+
+#searchResults a:hover {
+  text-decoration: underline;
+}
+
+#searchResults p {
+  color: red; /* Set the font color of "No results found" to red */
+}
+
+.chapter-nav-button {
+    background-color: rgba(255, 0, 0, 0.5); /* semi-transparent red */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.chapter-nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* semi-transparent white */
+    color: black;
+}
+
+
+.about-container {
+      padding: 10px;
+      background: linear-gradient(to right, red, darkred);
+      border-radius: 8px;
+      color: white; /* text color */
+      font-weight: bold;
+      max-width: 85%;
+      margin: 20px auto;
+      font-family: 'Exo 2', sans-serif;
+    }
+
+.slideshow-container {
+  max-width: 100%;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.mySlide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  opacity: 0;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.mySlide.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.mySlide img {
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0,0,0,0);
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+figure {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.3); /* Semi-transparent black background */
+    padding: 10px;
+    font-family: 'Exo 2', sans-serif; /* This sets the font to Exo 2 */
+    font-weight: bold;
+    border-radius: 10px; /* This adds some space around your text */
+    box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.5);
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* Make the video container responsive */
+        .outer-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 85%; /* Limit the width to 70% of the screen */
+            padding: 7px; /* Padding around the video */
+            box-sizing: border-box;
+            margin: 0 auto 20px auto;
+            background: linear-gradient(to right, #FF7F7F, red); /* Add a red to dark red gradient background */
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* Aspect ratio for 16:9 videos */
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .download-button {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: #f00;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-family: 'Exo 2', sans-serif;
+            color: white; /* Change font color to red */
+            font-weight: bold; /* Make the font bold */
+            text-decoration: none;
+        }
+
+
+
+/* Reset margin and padding for the whole page */
+body {
+  background: radial-gradient(circle, #FF3333, #770000);
+  margin: 0;
+  padding: 0;
+}
+
+/* Styles for the content sections */
+.content {
+  width: 85%; /* Set the width to 85% */
+  margin: 20px auto 0; /* Center the content horizontally and remove the top margin */
+  flex: 1; /* Allow the content to expand and fill the remaining vertical space */
+}
+
+/* Existing CSS code for the navigation bar */
+nav {
+  font-family: 'Exo 2', sans-serif;
+  background: radial-gradient(circle, #FF3333, #770000);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px; /* Add 10px padding to the top and bottom, and 20px padding to the left and right */
+  height: 80px;
+   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Set the fixed height of the navigation bar */
+}
+
+/* New CSS for the image container */
+.image-container {
+  text-align: center;
+  margin-top: 20px; /* Add some space below the nav bar */
+}
+
+.image-container img {
+  width: 25%;
+  max-width: 100%; /* Limit the width of the image to its original size */
+  opacity: 2;
+   /* Adjust the opacity of the image */
+}
+
+
+
+
+
+/* Styles for the content sections */
+.content {
+  width: 85%; /* Set the width to 85% */
+  margin: 0 auto; /* Center the content horizontally and remove all margins */
+}
+
+.watchmenow-info, .safety-info, .reasons-info {
+    margin-bottom: 20px; /* Add margin between content sections */
+}
+
+h1, h2, h3, p, li {
+    color: #fff; /* White font color */
+    font-family: 'Exo 2', sans-serif; /* Apply "Exo 2" font to all text */
+}
+
+
+.button-container {
+  padding: 10px 20px;
+    text-align: center;
+    margin: 20px 0; /* Add some margin to separate the button from the content above */
+}
+
+.watch-now-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Exo 2', sans-serif; /* Change the font to Exo 2 */
+    font-size: 1.2rem;
+    border-radius: 30px; /* Increase the border radius to make it more rounded */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a deeper shadow effect */
+}
+
+/* Optionally, add hover effect for the button */
+.watch-now-button:hover {
+    background-color: #cc0000;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Increase the shadow on hover */
+}
+
+body::after {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 80px; /* To start below the navigation bar */
+  left: 0;
+  width: 100%;
+  height: calc(100% - 80px); /* Adjust the height to cover the remaining space between footer and page body */
+  background-image: url("https://files.123freevectors.com/wp-content/original/119603-abstract-red-and-white-background-illustration.jpg");
+  background-repeat: no-repeat; /* Set background-repeat to "no-repeat" to prevent the loop */
+  background-size: cover; /* Set background-size to "cover" to make the image cover the entire container */
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.logo-title-container {
+    display: flex;
+    align-items: center; /* Vertically center the logo, title, and tagline */
+}
+
+.logo-container {
+    margin-right: 10px; /* Add some spacing between the logo and the title */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Add a subtle bevel effect */
+    display: flex; /* Add display flex to allow flex items to be aligned */
+    align-items: center; /* Vertically center the logo inside the container */
+    height: 80px; /* Set the fixed height of the logo container */
+    width: auto; /* Allow the container's width to adjust automatically with the logo's size */
+}
+
+.logo-container img {
+    height: 100%; /* Set the logo's height to 100% of the container's height */
+    width: auto; /* Allow the logo's width to adjust automatically with the height */
+}
+
+.nav-title {
+    display: flex;
+    flex-direction: column; /* Display the title and tagline in a column */
+    justify-content: center; /* Center the title and tagline vertically */
+    height: 80%; /* Make the .nav-title container occupy 80% of the height of the .logo-title-container */
+    max-height: 80px; /* Set the maximum height of the .nav-title container to 80px */
+}
+
+.nav-title h1, .nav-title p {
+    font-family: 'Exo 2', sans-serif; /* Apply the "Exo 2" font to the title and tagline */
+    margin: 0; /* Remove margin for precise spacing */
+    text-align: center; /* Center the title and tagline horizontally */
+    white-space: nowrap; /* Prevent the title and tagline from wrapping to a second line */
+}
+
+.nav-title h1 {
+    font-size: calc(4vw); /* Set the font size using viewport width units (vw) */
+    color: #fff; /* Set the font color to white */
+}
+
+.nav-title p {
+    font-size: calc(2vw); /* Set the font size using viewport width units (vw) */
+    color: #f0f0f0; /* Set the font color to a light greyish white (#f0f0f0) */
+}
+
+/* Existing styles */
+
+nav {
+  font-family: 'Exo 2', sans-serif;
+  background: radial-gradient(circle, #FF3333, #770000);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  height: 80px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: flex;
+  align-items: center;
+}
+
+nav li:not(:last-child) {
+  margin-right: 30px;
+}
+
+nav li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5vw;
+  /* Add the following styles to set a minimum font size for the links in the nav bar */
+  min-font-size: 16px;
+  font-size: max(min-font-size, 1.5vw);
+  /* Add hover color */
+  transition: color 0.3s ease;
+}
+
+nav li a:hover {
+  color: red; /* Set the hover color to red */
+}
+
+/* Add the following CSS to align the icons to the right side */
+nav .icons {
+  display: flex;
+  align-items: center;
+}
+
+/* Add the following media query to adjust the font size for smaller screens */
+@media screen and (max-width: 768px) {
+  nav li a {
+    font-size: 16px; /* Adjust the font size for smaller screens */
+  }
+}
+
+/* Add the following CSS to keep links and icons in one line */
+nav .nav-links {
+  display: flex;
+  align-items: center;
+}
+
+/* Add the following CSS to create space between links and icons */
+nav .nav-links li {
+  margin-right: 10px;
+}
+
+
+/* Additional CSS for the menu icon */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+}
+
+/* Add the following media query to show the menu icon and hide the navigation links when the screen size is reduced */
+@media screen and (max-width: 768px) {
+  nav .nav-links ul {
+    display: flex;
+    flex-direction: column; /* Stack the navigation links in rows */
+    align-items: flex-start; /* Align the navigation links to the left side */
+  }
+
+  nav .nav-links li {
+    margin-bottom: 10px;
+  }
+
+  /* Show the menu icon when the screen size is small */
+  .menu-icon {
+    display: none; /* Remove the menu icon */
+  }
+
+  /* Show the navigation links when the menu icon is hidden */
+  nav ul.show-menu {
+    display: flex;
+  }
+}
+
+footer {
+  background-color: radial-gradient(circle, #FF3333, #770000);
+  padding: 10px 0;
+  width: 100%;
+  bottom: 0; /* Position the footer at the bottom */
+  left: 0;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5vw;
+  display: block;
+  /* Add the following styles to set a minimum font size */
+  min-font-size: 16px; /* Adjust the minimum font size as needed */
+  font-size: max(min-font-size, 1.5vw); /* Set the font size as the larger value between 1.5vw and the minimum font size */
+}
+
+.footer-links a::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: attr(data-icon);
+  font-size: 1.5vw;
+  margin-right: 5px;
+}
+
+.footer-links a:hover {
+  color: red;
+}
+
+.social-icons {
+  display: flex;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 24px;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: red;
+}
+
+/* Add margins to create space between the links and icons */
+.footer-nav {
+  margin-top: 10px;
+}
+
+/* Add the following CSS to set the footer nav to 100% width */
+@media screen and (max-width: 768px) {
+  .footer-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links a {
+    font-size: 16px; /* Adjust the font size for smaller screens */
+  }
+}
+
+/* Additional CSS for the copyright line */
+footer .copyright {
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  margin-top: 20px;
+  font-family: 'Exo 2', sans-serif; /* Apply the "Exo 2" font to the copyright text */
+}
+
+/* Style for the form title with futuristic style */
+.futuristic-form {
+  max-width: 95%;
+  margin: 20px auto;
+  background: linear-gradient(to bottom, #ff0000, #000000); /* Red to black gradient background */
+  border-radius: 20px; /* Add rounded corners to the form */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); /* Add a subtle glow effect */
+  color: #ff0000; /* Set font color to red */
+  padding: 30px; /* Add inner padding to the form */
+}
+
+.futuristic-form h2 {
+  color: red; /* Set form title font color to red */
+  margin-bottom: 20px;
+}
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.gallery figure {
+    flex: 1 0 calc(12.5% - 2%); /* 8 items per row */
+    max-width: calc(12.5% - 2%);
+    margin: 1%;
+    padding: 4px; /* Reduce padding to 5px */
+    box-sizing: border-box;
+    background: linear-gradient(to right, #FF7F7F, red); /* Add a red to dark red gradient background */
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.3);
+    position: relative; /* Make corners rounded */
+}
+
+
+
+.gallery figure::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, rgba(255,127,127,0.2), rgba(255,0,0,0.2)); /* Semi-transparent light red to red gradient */
+    border-radius: 10px; /* Make corners rounded */
+    z-index: -1; /* Place the pseudo-element behind the content */
+}
+
+.gallery figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+     /* Make image corners rounded */
+}
+
+/* Adjust to 4 items per row for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+    .gallery figure {
+        flex: 1 0 calc(25% - 2%);
+        max-width: calc(25% - 2%);
+    }
+}
+
+/* Styles for the image and the caption */
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery figcaption {
+    text-align: center;
+    font-family: 'Exo 2', sans-serif; /* Set font family to Exo 2 */
+    color: #fff; /* Change the font color to white */
+    width: 100%; /* Make the caption width same as image width */
+    word-wrap: break-word;
+     /* Wrap the long titles to next line */
+}
+
+.title {
+  margin-top: 10px;
+  color: #fff;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 18px;
+}
+
+/* Remove the buttons */
+.play-button {
+  display: none;
+}
+
+.pagination {
+    text-align: center;
+}
+
+.pagination a {
+    display: inline-block;
+    margin: 0 30px;
+    padding: 12px 25px;
+    color: White;
+    font-size: 28px;
+    text-decoration: none;
+    font-family: 'Exo 2', sans-serif;
+    transition: background-color 0.3s ease;
+    background: rgba(255, 255, 255, 0.3); /* Add a red to dark red gradient background */
+    border-radius: 10px;
+    margin: 20px auto;
+      box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.3);
+}
+
+.pagination a:hover {
+    background-color: white;
+}
