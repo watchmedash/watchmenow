@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       const link = document.createElement("a");
       link.textContent = item;
       // Replace 'YOUR_LINK_BASE_URL' with your own link base URL
-      link.href = `../Site/movies/${encodeURIComponent(item)}.html`;
+      link.href = `../movies/${encodeURIComponent(item)}.html`;
       li.appendChild(link);
       ul.appendChild(li);
     });
