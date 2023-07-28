@@ -513,24 +513,20 @@ footer {
   width: 100%;
   bottom: 0; /* Position the footer at the bottom */
   left: 0;
-  box-sizing: border-box;
-  overflow: auto;
 }
 
 .footer-nav {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column; /* This line makes the items stack vertically */
   align-items: center;
-  width: 100%;
-  box-sizing: border-box;
-  overflow: auto;
+  flex-wrap: wrap;
 }
 
-.footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.footer-links,
+.social-icons {
+  width: 100%;
+  justify-content: center;
 }
 
 .footer-links li {
@@ -563,7 +559,6 @@ footer {
 .social-icons {
   display: flex;
   margin-top: 10px;
-  overflow: auto;
 }
 
 .social-icons a {
@@ -590,7 +585,7 @@ footer {
   }
 
   .footer-links a {
-     font-size: clamp(16px, 1.5vw, 32px);
+    font-size: 16px; /* Adjust the font size for smaller screens */
   }
 }
 
