@@ -625,11 +625,11 @@ footer .copyright {
     flex: 1 0 calc(12.5% - 2%); /* 8 items per row */
     max-width: calc(12.5% - 2%);
     margin: 1%;
-    padding: 4px; /* Reduce padding to 5px */
+    padding: 0; /* Reduce padding to 5px */
     box-sizing: border-box;
-    background: linear-gradient(to right, #FF7F7F, red); /* Add a red to dark red gradient background */
+    background: none; /* Add a red to dark red gradient background */
     border-radius: 10px;
-    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.0);
     position: relative; /* Make corners rounded */
 }
 
@@ -643,7 +643,7 @@ footer .copyright {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to right, rgba(255,127,127,0.2), rgba(255,0,0,0.2)); /* Semi-transparent light red to red gradient */
+    background: none; /* Semi-transparent light red to red gradient */
     border-radius: 10px; /* Make corners rounded */
     z-index: -1; /* Place the pseudo-element behind the content */
 }
