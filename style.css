@@ -711,4 +711,5 @@ footer .copyright {
 
 .pagination a:hover {
     background-color: white;
+    color: black;
 }
