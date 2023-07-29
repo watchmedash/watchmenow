@@ -515,80 +515,46 @@ footer {
   left: 0;
 }
 
-.footer-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-links,
+.footer-nav,
 .social-icons {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 100%; // Add this
+  width: 100%;
 }
 
-.footer-links li {
-  display: inline-block;
-  margin-bottom: 10px;
-}
-
-.footer-links a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.5vw;
-  display: block;
-  /* Add the following styles to set a minimum font size */
-  min-font-size: 16px; /* Adjust the minimum font size as needed */
-  font-size: max(min-font-size, 1.5vw); /* Set the font size as the larger value between 1.5vw and the minimum font size */
-}
-
-.footer-links a::before {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  content: attr(data-icon);
-  font-size: 1.5vw;
-  margin-right: 5px;
-}
-
-.footer-links a:hover {
-  color: red;
-}
-
-.social-icons {
-  display: flex;
-  margin-top: 10px;
-}
-
-.social-icons a {
-  color: #fff;
-  font-size: 24px;
-  margin: 0 10px;
-  text-decoration: none;
-}
-
-.social-icons a:hover {
-  color: red;
-}
-
-/* Add margins to create space between the links and icons */
-.footer-nav {
-  margin-top: 10px;
-}
-
-/* Add the following CSS to set the footer nav to 100% width */
-@media screen and (max-width: 768px) {
+/* On smaller screens */
+@media (max-width: 600px) {
   .footer-nav {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items vertically */
   }
 
-  .footer-links a {
-    font-size: 16px; /* Adjust the font size for smaller screens */
+  /* Add some margin to separate the icons */
+  .social-icons a {
+    margin-bottom: 10px;
+  }
+
+  .footer-links li {
+    display: block; /* Make each link occupy its own line */
+    text-align: center; /* Center the text of each link */
+  }
+
+  .social-icons {
+    flex-wrap: nowrap; /* Prevent the social icons from wrapping */
+  }
+
+  /* Adjust the font-size and margin for the links and icons for small screens */
+  .footer-links a,
+  .social-icons a {
+    font-size: 14px; 
+    margin: 5px;
   }
 }
 
+.footer {
+  width: 100%;
+}
 /* Additional CSS for the copyright line */
 footer .copyright {
   text-align: center;
