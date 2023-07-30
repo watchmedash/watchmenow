@@ -67,16 +67,26 @@
 
  <div id="searchResults"></div>
 
-<div class="outer-wrapper">
-<div class="video-wrapper">
- <div class="video-container">
-         <!-- Your video embed code here, e.g., from YouTube -->
-         <iframe src="https://streamtape.com/e/K42qe1A131To70" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-     </div>
-     </div>
-     </div>
-
-<a href="https://streamtape.com/d/K42qe1A131To70" class="download-button">Download Video</a>
+ <video
+     id="my-video"
+     class="video-js"
+     controls
+     preload="auto"
+     width="640"
+     height="264"
+     poster="https://m.media-amazon.com/images/M/MV5BYTUxYjczMWUtYzlkZC00NTcwLWE3ODQtN2I2YTIxOTU0ZTljXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg"
+     data-setup="{}"
+   >
+     <source src="https://streamtape.com/e/K42qe1A131To70/The_Little_Mermaid.mp4" type="video/mp4" />
+     <source src="MY_VIDEO.webm" type="video/webm" />
+     <p class="vjs-no-js">
+       To view this video please enable JavaScript, and consider upgrading to a
+       web browser that
+       <a href="https://videojs.com/html5-video-support/" target="_blank"
+         >supports HTML5 video</a
+       >
+     </p>
+   </video>
 
 
 
