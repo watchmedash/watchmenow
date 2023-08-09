@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
   // Sample list of items for search
   const itemList = [
     "1917",
+    "I Am Rage",
+    "The Collective",
+    "The Three Musketeers D Artagnan",
     "Hidden Strike",
     "Insidious - The Red Door",
 "365 Days This Day",
