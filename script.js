@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
   // Sample list of items for search
   const itemList = [
     "1917",
+    "Hidden Strike",
+    "Insidious - The Red Door",
 "365 Days This Day",
 "Army of the Dead",
 "Army of Thieves",
