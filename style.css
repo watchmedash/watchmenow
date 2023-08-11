@@ -296,7 +296,16 @@ nav {
    /* Adjust the opacity of the image */
 }
 
+.image-container2 {
+  text-align: center;
+  margin-top: 20px; /* Add some space below the nav bar */
+}
 
+.image-container2 img {
+  width: 70%;
+  max-width: 100%; /* Limit the width of the image to its original size */
+   /* Adjust the opacity of the image */
+}
 
 
 
