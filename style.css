@@ -182,18 +182,6 @@ figure {
     position: relative;
 }
 
-.overlay {
-    position: absolute;
-    top: 6px;
-    right: 6px;
-    color: #fff;
-    background-color: rgba(0,0,0,0.3); /* Semi-transparent black background */
-    padding: 10px;
-    font-family: 'Exo 2', sans-serif; /* This sets the font to Exo 2 */
-    font-weight: bold;
-    border-radius: 10px; /* This adds some space around your text */
-    box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.5);
-}
 
 figure img {
     width: 100%;

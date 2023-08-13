@@ -6,6 +6,8 @@
 document.addEventListener('DOMContentLoaded', (event) => {
   // Sample list of items for search
   const itemList = [
+"Zom 100 - bucket list of the dead",
+"SpongeBob SquarePants Presents The Tidal Zone",
     "1917",
     "I Am Rage",
     "The Collective",
