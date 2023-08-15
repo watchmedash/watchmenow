@@ -1,3 +1,9 @@
+.terra {
+            display: flex;
+            justify-content: center; /* centers horizontally */
+            align-items: center; /* centers vertically */
+            height: 100vh; /* optional: takes full viewport height */
+        }
 /* Add the following styles to center the search container */
 .search-container {
   margin-top: 20px;
