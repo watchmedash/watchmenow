@@ -1,4 +1,19 @@
+function startCountdown(countdownID, bannerID) {
+    let countdownTime = 4; // 10 seconds
+    let countdownDisplay = document.getElementById(countdownID);
 
+    countdownDisplay.innerText = countdownTime; // Display initial countdown value
+
+    let countdownInterval = setInterval(function() {
+        countdownTime--;
+        countdownDisplay.innerText = countdownTime;
+
+        if (countdownTime <= 0) {
+            clearInterval(countdownInterval); // Stop the countdown
+            document.getElementById(bannerID).style.display = "none"; // Hide the specific banner
+        }
+    }, 1000); // 1000ms = 1 second
+}
 
 
 

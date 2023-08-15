@@ -1,8 +1,80 @@
+.close-banner {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f00;  // Red color
+    color: #fff;             // White font color
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+
+
+.close-banned {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f00;  // Red color
+    color: #fff;             // White font color
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.side-banner {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    width: 160px; /* fixed width */
+    height: 600px; /* fixed height */
+    transform: translateY(-50%);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.side-banner iframe {
+    width: 100%; /* full width of the container */
+    height: 100%; /* full height of the container */
+}
+
+.side-banned {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    width: 160px; /* fixed width */
+    height: 600px; /* fixed height */
+    transform: translateY(-50%);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.side-banned iframe {
+    width: 100%; /* full width of the container */
+    height: 100%; /* full height of the container */
+}
+
+
 .terra {
             display: flex;
             justify-content: center; /* centers horizontally */
             align-items: center; /* centers vertically */
-            height: 100vh; /* optional: takes full viewport height */
+            margin-bottom: 5px;
+            margin-top: 5px;
         }
 /* Add the following styles to center the search container */
 .search-container {
@@ -197,7 +269,7 @@ figure img {
 .video-container {
   position: relative;
   overflow: hidden;
-  width: 85%;
+  width: 74%;
   padding-top: 56.25%; /* 16:9 Aspect Ratio */
   margin: 0 auto; /* Centering */
 }
