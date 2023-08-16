@@ -21,6 +21,9 @@ function startCountdown(countdownID, bannerID) {
 document.addEventListener('DOMContentLoaded', (event) => {
   // Sample list of items for search
   const itemList = [
+
+    "Elemental",
+    "Heart of Stone",
 "Zom 100 - bucket list of the dead",
 "SpongeBob SquarePants Presents The Tidal Zone",
     "1917",
