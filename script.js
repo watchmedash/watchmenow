@@ -22,6 +22,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
   // Sample list of items for search
   const itemList = [
     "No Hard Feelings",
+    "Escape Room Tournament of Champions",
+    "Black Widow",
+    "Birds of Prey",
+    "Justice League Dark Apokolips War",
+    "Jujutsu Kaisen 0",
+    "The Batman",
+    "The Forever Purge",
+    "Hitman's Wife's Bodyguard",
+    "Frozen II",
+    "Angel Has Fallen",
+    "The Invisible Man",
+    "Anna",
 "A Quiet Place Part II",
 "Antman and the Wasp Quantumania",
 "F9 The Fast Saga",
