@@ -21,6 +21,7 @@ function startCountdown(countdownID, bannerID) {
 document.addEventListener('DOMContentLoaded', (event) => {
   // Sample list of items for search
   const itemList = [
+    "No Hard Feelings",
 "A Quiet Place Part II",
 "Antman and the Wasp Quantumania",
 "F9 The Fast Saga",
