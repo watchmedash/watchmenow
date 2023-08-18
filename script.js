@@ -21,6 +21,8 @@ function startCountdown(countdownID, bannerID) {
 document.addEventListener('DOMContentLoaded', (event) => {
   // Sample list of items for search
   const itemList = [
+    "Kevin Hart Reality Check",
+    "Jimmy O Yang Guess How Much",
     "No Hard Feelings",
     "Escape Room Tournament of Champions",
     "Black Widow",
