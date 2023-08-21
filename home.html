@@ -1068,19 +1068,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // For genre buttons
 document.querySelectorAll('.genre-button').forEach(function(button) {
-    button.addEventListener('click', function() {
-        // Open the link in a new tab
-        openLinkInNewTab();
-    });
+    button.addEventListener('click', openLinkInNewTab);
 });
 
 // For year buttons
 document.querySelectorAll('.year-button').forEach(function(button) {
-    button.addEventListener('click', function() {
-        // Open the link in a new tab
-        openLinkInNewTab();
-    });
+    button.addEventListener('click', openLinkInNewTab);
 });
+
+// For "All Movies" button
+document.querySelector('.all-movies-button').addEventListener('click', openLinkInNewTab);
+
+// For "Year" dropdown toggle based on class and content
+document.querySelectorAll('.dropdown-toggle').forEach(function(button) {
+    if (button.textContent.trim() === "Year") {
+        button.addEventListener('click', openLinkInNewTab);
+    }
+});
+
+// For "Genre" dropdown toggle based on class and content
+document.querySelectorAll('.dropdown-toggle').forEach(function(button) {
+    if (button.textContent.trim() === "Genre") {
+        button.addEventListener('click', openLinkInNewTab);
+    }
+});
+
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="homepage.js"></script>
