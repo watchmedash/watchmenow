@@ -21,6 +21,8 @@ function startCountdown(countdownID, bannerID) {
 document.addEventListener('DOMContentLoaded', (event) => {
   // Sample list of items for search
   const itemList = [
+    "Suki",
+    "One Piece Film Red",
     "Puppy Love",
     "The Communion Girl",
     "The Fast and the Furious - Tokyo Drift",
