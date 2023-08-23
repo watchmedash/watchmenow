@@ -1,3 +1,4 @@
+
 const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
 const dropdownContents = document.querySelectorAll('.dropdown-content');
 const galleryContainer = document.getElementById('gallery-container');
@@ -35,18 +36,6 @@ document.addEventListener('click', function(event) {
     }
 });
 
-genreButtons.forEach(button => {
-    button.addEventListener('click', function() {
-        genreButtons.forEach(innerButton => innerButton.classList.remove('active'));
-        button.classList.add('active');
-
-        currentGenreFilter = button.getAttribute('data-genre');
-        console.log('Selected genre:', currentGenreFilter);
-        currentPage = 1;
-        refreshGallery();
-    });
-});
-
 const allMoviesButton = document.querySelector('.all-movies-button');
 allMoviesButton.addEventListener('click', function() {
     currentFilter = 'all';
@@ -55,46 +44,61 @@ allMoviesButton.addEventListener('click', function() {
     refreshGallery();
 });
 
-const yearTabs = document.querySelectorAll('.dropdown-container .year-button');
-const movies = document.querySelectorAll('#gallery-container figure');
+const requestedButton = document.querySelector('.requested-button');
+requestedButton.addEventListener('click', function() {
+    currentFilter = 'requested';
+    currentGenreFilter = 'all';
+    currentPage = 1;
+    refreshGallery();
+});
 
+genreButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        genreButtons.forEach(innerButton => innerButton.classList.remove('active'));
+        button.classList.add('active');
+        currentFilter = 'all';
+        currentGenreFilter = button.getAttribute('data-genre');
+        currentPage = 1;
+        refreshGallery();
+    });
+});
+
+const yearTabs = document.querySelectorAll('.dropdown-container .year-button');
 yearTabs.forEach(tab => {
     tab.addEventListener('click', function() {
         yearTabs.forEach(innerTab => innerTab.classList.remove('active'));
         tab.classList.add('active');
-
         currentFilter = tab.getAttribute('data-year');
-        console.log('Selected year:', currentFilter); // Debug log added here
+        currentGenreFilter = 'all';
         currentPage = 1;
         refreshGallery();
     });
 });
 
 function refreshGallery() {
+    const movies = document.querySelectorAll('#gallery-container figure');
     movies.forEach(movie => {
         movie.style.display = 'none';
     });
 
-    const yearFilteredMovies = currentFilter === 'all'
-        ? [...movies]
-        : [...movies].filter(movie => movie.getAttribute('data-release-year') === currentFilter);
+    let filteredMovies = [...movies];
 
-    // Debug logs to display movies after year filtering
-    console.log(`Year Filtered Movies Count: ${yearFilteredMovies.length}`);
-    yearFilteredMovies.forEach(m => console.log(`Movie: ${m.querySelector('figcaption').innerText}, Year: ${m.getAttribute('data-release-year')}`));
+    if (currentFilter === 'requested') {
+        filteredMovies = filteredMovies.filter(movie => movie.getAttribute('data-requested') === 'true');
+    } else if (currentFilter !== 'all') {
+        filteredMovies = filteredMovies.filter(movie => movie.getAttribute('data-release-year') === currentFilter);
+    }
 
-    const genreAndYearFilteredMovies = currentGenreFilter === 'all'
-        ? yearFilteredMovies
-        : yearFilteredMovies.filter(movie => {
+    if (currentGenreFilter !== 'all') {
+        filteredMovies = filteredMovies.filter(movie => {
             const genreAttribute = movie.getAttribute('data-genre');
             if (!genreAttribute) return false;
             const genres = genreAttribute.split(',');
             return genres.includes(currentGenreFilter);
         });
+    }
 
-    console.log(`Genre and Year Filtered Movies Count: ${genreAndYearFilteredMovies.length}`);
-
-    genreAndYearFilteredMovies.slice((currentPage - 1) * perPage, currentPage * perPage).forEach(movie => {
+    filteredMovies.slice((currentPage - 1) * perPage, currentPage * perPage).forEach(movie => {
         movie.style.display = 'block';
     });
 
