@@ -1,7 +1,7 @@
 .dropdown-wrapper {
     display: flex;
     align-items: center; /* Vertical alignment, if necessary */
-    flex-wrap: wrap; /* Allows items to wrap onto multiple lines if they run out of space */
+    flex-wrap: nowrap;; /* Allows items to wrap onto multiple lines if they run out of space */
     gap: 20px; /* Spacing between the dropdowns */
 }
 
