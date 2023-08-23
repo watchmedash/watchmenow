@@ -133,6 +133,10 @@
     transform: translateY(-50%);
     z-index: 1000;
     overflow: hidden;
+    background-image: url('banned.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .side-banner iframe {
@@ -149,6 +153,10 @@
     transform: translateY(-50%);
     z-index: 1000;
     overflow: hidden;
+    background-image: url('banned.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .side-banned iframe {
