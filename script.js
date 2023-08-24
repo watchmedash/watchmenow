@@ -21,6 +21,8 @@ function startCountdown(countdownID, bannerID) {
 document.addEventListener('DOMContentLoaded', (event) => {
   // Sample list of items for search
   const itemList = [
+    "Past Lives",
+    "Hacksaw Ridge",
     "Sugapa",
     "Doraemon the Movie - Nobitas Sky Utopia",
     "The First Slam Dunk",
