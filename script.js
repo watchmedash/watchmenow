@@ -54,6 +54,13 @@ function startCountdown(countdownID, bannerID) {
 document.addEventListener('DOMContentLoaded', (event) => {
   // Sample list of items for search
   const itemList = [
+    "Wrong Turn",
+    "Wrong Turn 2 Dead End",
+    "Wrong Turn 3 Left for Dead",
+    "Wrong Turn 4 Bloody Beginnings",
+    "Wrong Turn 5 Bloodlines",
+    "Wrong Turn 6 Last Resort",
+    "Wrong Turn 2021",
     "Past Lives",
     "Hacksaw Ridge",
     "Sugapa",
