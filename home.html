@@ -17,7 +17,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="style.css" rel="stylesheet"/>
 <title>Home</title>
-</meta></meta></head>
+</meta></meta><script>
+        (function() {
+            const currentTheme = localStorage.getItem("theme");
+            if (currentTheme === "dark") {
+                document.body.classList.add("dark-mode");
+            }
+        })();
+    </script></head>
 <body>
 <header>
 <nav>
@@ -44,6 +51,7 @@
 </div>
 </nav>
 </header>
+<button id="themeToggle">Dark Mode</button>
 <div class="search-container">
 <form>
 <input autocomplete="off" id="searchInput" placeholder="Search..." type="text"/>
