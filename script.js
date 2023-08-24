@@ -1,3 +1,36 @@
+document.addEventListener("DOMContentLoaded", function() {
+    // Reference to the theme toggle button
+    const themeToggleButton = document.getElementById("themeToggle");
+
+    // Retrieve the saved theme preference
+    const currentTheme = localStorage.getItem("theme");
+    if (currentTheme === "dark") {
+        document.body.classList.add("dark-mode");
+        themeToggleButton.textContent = "Light Mode"; // Set button text for dark mode
+    }
+
+    themeToggleButton.addEventListener("click", function() {
+        // Toggle the theme
+        document.body.classList.toggle("dark-mode");
+
+        // Change the button text based on the theme
+        if (document.body.classList.contains("dark-mode")) {
+            themeToggleButton.textContent = "Light Mode";
+        } else {
+            themeToggleButton.textContent = "Dark Mode";
+        }
+
+        // Save the theme preference
+        let theme = "light";
+        if (document.body.classList.contains("dark-mode")) {
+            theme = "dark";
+        }
+        localStorage.setItem("theme", theme);
+    });
+});
+
+
+
 function startCountdown(countdownID, bannerID) {
     let countdownTime = 4; // 10 seconds
     let countdownDisplay = document.getElementById(countdownID);

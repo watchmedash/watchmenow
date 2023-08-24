@@ -1,3 +1,182 @@
+#themeToggle {
+  margin: 5px;
+  background-color: #ff0000;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+    display: inline-block;
+    padding: 3px 8px;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#themeToggle:hover {
+    background-color: #3b4252; /* Darker shade for hover */
+}
+
+body.dark-mode #themeToggle {
+    background-color:#3b4252;
+}
+
+body.dark-mode #themeToggle:hover {
+    background-color: #FF3333;
+}
+
+/* General Pagination Button */
+body.dark-mode .pagination a {
+    background-color: #2e3440;
+    color: #ffffff; /* White text for buttons */
+    border-color: #3b4252; /* Dark border for buttons if they have borders */
+}
+
+body.dark-mode .pagination a:hover {
+    background-color: #3b4252;
+}
+
+/* Prev Page Button */
+body.dark-mode .prev-page {
+    background-color: #2e3440;
+    color: #ffffff;
+}
+
+body.dark-mode .prev-page:hover {
+    background-color: #3b4252;
+}
+
+/* Next Page Button */
+body.dark-mode .next-page {
+    background-color: #2e3440;
+    color: #ffffff;
+}
+
+body.dark-mode .next-page:hover {
+    background-color: #3b4252;
+}
+
+
+body.dark-mode .filter-button {
+    background-color: #2e3440;
+    color: #ffffff; /* White text for buttons */
+    border-color: #3b4252; /* Dark border for buttons if they have borders */
+}
+
+body.dark-mode .filter-button:hover {
+    background-color: #3b4252;
+}
+
+/* Dropdown Toggle Button */
+body.dark-mode .dropdown-toggle {
+    background-color: #2e3440;
+    color: #ffffff;
+}
+
+body.dark-mode .dropdown-toggle:hover {
+    background-color: #3b4252;
+}
+
+/* Dropdown Content Background */
+body.dark-mode .dropdown-content {
+    background-color: #2e3440;
+}
+
+/* Year and Genre Buttons inside Dropdown */
+body.dark-mode .year-button, body.dark-mode .genre-button {
+    background-color: #2e3440;
+    color: #ffffff;
+}
+
+body.dark-mode .year-button:hover, body.dark-mode .genre-button:hover {
+    background-color: #3b4252;
+}
+
+
+body.dark-mode .search-container {
+    margin-top: 20px;
+}
+
+/* Search Bar and Icon */
+body.dark-mode .search-container form {
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.3); /* Inverted shadow for dark mode */
+}
+
+body.dark-mode .search-container input {
+    border-color: #3b4252; /* Dark border color */
+    background-color: #2e3440; /* Dark input background */
+    color: #ffffff; /* White text for input */
+}
+
+body.dark-mode .search-container button i {
+    color: #ffffff; /* White color for the search icon */
+}
+
+/* Search Results */
+body.dark-mode #searchResults {
+    background-color: rgba(46, 52, 64, 0.95); /* Darker background with slight transparency */
+    color: #ffffff; /* White font color */
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.3); /* Inverted shadow for dark mode */
+}
+
+body.dark-mode #searchResults a {
+    color: #ffffff; /* White font color for links */
+}
+
+body.dark-mode #searchResults a:hover {
+    color: #88c0d0; /* Light blue hover color for distinction */
+}
+
+body.dark-mode #searchResults p {
+    color: #ffffff; /* White font color for "No results found" */
+}
+
+/* Body Background */
+body.dark-mode {
+    background: radial-gradient(circle, #2e3440, #121212);
+}
+
+/* Navigation Bar */
+body.dark-mode nav {
+    background: radial-gradient(circle, #2e3440, #1f2a38);
+}
+
+/* Footer */
+body.dark-mode footer {
+    background: radial-gradient(circle, #2e3440, #1f2a38);
+}
+
+/* Watch Now! Button */
+body.dark-mode .watch-now-button {
+    background-color: #2e3440;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Enhanced shadow effect for contrast */
+}
+
+body.dark-mode .watch-now-button:hover {
+    background-color: #3b4252;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8); /* Enhanced shadow effect for hover */
+}
+
+/* Futuristic Form */
+body.dark-mode .futuristic-form {
+    background: linear-gradient(to bottom, #2e3440, #121212);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4); /* Enhance glow effect */
+}
+
+body.dark-mode .futuristic-form h2 {
+    color: #ffffff;
+}
+
+body.dark-mode::after {
+    background-image: url("https://4kwallpapers.com/images/walls/thumbs_3t/8324.png");
+    opacity: 0.8; /* You can adjust opacity as needed, making it slightly more opaque for dark mode */
+}
+
 .dropdown-wrapper {
     display: flex;
     align-items: center; /* Vertical alignment, if necessary */
