@@ -3,6 +3,7 @@ const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
 const dropdownContents = document.querySelectorAll('.dropdown-content');
 const galleryContainer = document.getElementById('gallery-container');
 const genreButtons = document.querySelectorAll('.genre-button');
+const movies = document.querySelectorAll('#gallery-container figure');
 
 let currentPage = 1;
 const perPage = 32;
@@ -76,7 +77,7 @@ yearTabs.forEach(tab => {
 });
 
 function refreshGallery() {
-    const movies = document.querySelectorAll('#gallery-container figure');
+
     movies.forEach(movie => {
         movie.style.display = 'none';
     });
