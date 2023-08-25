@@ -54,6 +54,7 @@ function startCountdown(countdownID, bannerID) {
 document.addEventListener('DOMContentLoaded', (event) => {
   // Sample list of items for search
   const itemList = [
+    "Meg 2 The Trench",
     "Wrong Turn",
     "Wrong Turn 2 Dead End",
     "Wrong Turn 3 Left for Dead",
