@@ -1,4 +1,3 @@
-
 const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
 const dropdownContents = document.querySelectorAll('.dropdown-content');
 const galleryContainer = document.getElementById('gallery-container');

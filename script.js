@@ -1,38 +1,6 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Reference to the theme toggle button
-    const themeToggleButton = document.getElementById("themeToggle");
-
-    // Retrieve the saved theme preference
-    const currentTheme = localStorage.getItem("theme");
-    if (currentTheme === "dark") {
-        document.body.classList.add("dark-mode");
-        themeToggleButton.textContent = "Light Mode"; // Set button text for dark mode
-    }
-
-    themeToggleButton.addEventListener("click", function() {
-        // Toggle the theme
-        document.body.classList.toggle("dark-mode");
-
-        // Change the button text based on the theme
-        if (document.body.classList.contains("dark-mode")) {
-            themeToggleButton.textContent = "Light Mode";
-        } else {
-            themeToggleButton.textContent = "Dark Mode";
-        }
-
-        // Save the theme preference
-        let theme = "light";
-        if (document.body.classList.contains("dark-mode")) {
-            theme = "dark";
-        }
-        localStorage.setItem("theme", theme);
-    });
-});
-
-
 
 function startCountdown(countdownID, bannerID) {
-    let countdownTime = 4; // 10 seconds
+    let countdownTime = 2; // 10 seconds
     let countdownDisplay = document.getElementById(countdownID);
 
     countdownDisplay.innerText = countdownTime; // Display initial countdown value
@@ -52,7 +20,6 @@ function startCountdown(countdownID, bannerID) {
 
 
 document.addEventListener('DOMContentLoaded', (event) => {
-  // Sample list of items for search
   const itemList = [
     "Meg 2 The Trench",
     "Wrong Turn",
@@ -224,57 +191,40 @@ document.addEventListener('DOMContentLoaded', (event) => {
 "Zack Snyders Justice League",
 
   ];
-
-  // Function to perform search
   function performSearch() {
     const searchInput = document.getElementById("searchInput");
     const searchResults = document.getElementById("searchResults");
     const searchTerm = searchInput.value.toLowerCase();
-
-    // Clear previous search results
     searchResults.innerHTML = "";
 
     if (searchTerm.trim() === "") {
-      // If the search input is empty, hide the search results
       searchResults.style.display = "none";
     } else {
-      // Filter items based on search term
       const filteredItems = itemList.filter((item) =>
         item.toLowerCase().includes(searchTerm)
       );
-
-      // Display search results
       if (filteredItems.length === 0) {
         searchResults.innerHTML = "<p>No results found.</p>";
       } else {
         displayItemList(filteredItems, searchResults);
       }
-
-      // Show the search results
       searchResults.style.display = "block";
     }
   }
-
-  // Function to display a list of items in the search results container
   function displayItemList(items, container) {
     const ul = document.createElement("ul");
     items.forEach((item) => {
       const li = document.createElement("li");
       const link = document.createElement("a");
       link.textContent = item;
-      // Replace 'YOUR_LINK_BASE_URL' with your own link base URL
       link.href = `../movies/${encodeURIComponent(item)}.html`;
       li.appendChild(link);
       ul.appendChild(li);
     });
     container.appendChild(ul);
   }
-
-  // Attach event listener to search input
   const searchInput = document.getElementById("searchInput");
   searchInput.addEventListener("input", performSearch);
-
-  // Initially hide the search results
   const searchResults = document.getElementById("searchResults");
   searchResults.style.display = "none";
 });
