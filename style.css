@@ -1,3 +1,30 @@
+/* Cookie Consent Banner Styles */
+#cookieConsentBanner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: red;  /* Changed to red */
+    color: white;  /* Font color is white */
+    text-align: center;
+    padding: 10px;
+    z-index: 1000;
+}
+
+#acceptCookiesButton {
+    margin-left: 20px;
+    padding: 5px 20px;
+    background-color: red;  /* Changed to red */
+    color: white;  /* Font color is white */
+    border: none;
+    cursor: pointer;
+}
+
+#acceptCookiesButton:hover {
+    background-color: #b30000;  /* Darker red on hover */
+}
+
+
 .gallery-wrapper {
     display: flex;
     justify-content: center;
