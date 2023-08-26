@@ -624,21 +624,17 @@ footer .copyright {
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
-    width: 95%;  /* Set the width to 65% */
-    margin: 0 auto;  /* Center the gallery */
 }
-
 
 .gallery figure {
     flex: 1 0 calc(12.5% - 2%); /* 8 items per row */
     max-width: calc(12.5% - 2%);
     margin: 1%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 0;
+    padding: 0; /* Reduce padding to 5px */
     box-sizing: border-box;
-    background: none;
-    border-radius: 1px;
+    background: none; /* Add a red to dark red gradient background */
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.0);
     position: relative; /* Make corners rounded */
 }
 
@@ -653,14 +649,15 @@ footer .copyright {
     left: 0;
     right: 0;
     background: none; /* Semi-transparent light red to red gradient */
-    border-radius: 5px; /* Make corners rounded */
+    border-radius: 10px; /* Make corners rounded */
     z-index: -1; /* Place the pseudo-element behind the content */
 }
 
 .gallery figure img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 10px;
+     /* Make image corners rounded */
 }
 
 /* Adjust to 4 items per row for screens smaller than 600px */
@@ -671,6 +668,7 @@ footer .copyright {
     }
 }
 
+/* Styles for the image and the caption */
 .gallery img {
     width: 100%;
     height: auto;
@@ -679,16 +677,17 @@ footer .copyright {
 .gallery figcaption {
     text-align: center;
     font-family: 'Exo 2', sans-serif; /* Set font family to Exo 2 */
-    color: #fff;
-    width: 100%;
+    color: #fff; /* Change the font color to white */
+    width: 100%; /* Make the caption width same as image width */
     word-wrap: break-word;
+     /* Wrap the long titles to next line */
 }
 
 .title {
   margin-top: 10px;
   color: #fff;
   font-family: 'Exo 2', sans-serif;
-  font-size: 12px;
+  font-size: 18px;
 }
 
 
