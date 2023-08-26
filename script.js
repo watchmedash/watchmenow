@@ -1,26 +1,11 @@
 
-function startCountdown(countdownID, bannerID) {
-    let countdownTime = 2; // 10 seconds
-    let countdownDisplay = document.getElementById(countdownID);
-
-    countdownDisplay.innerText = countdownTime; // Display initial countdown value
-
-    let countdownInterval = setInterval(function() {
-        countdownTime--;
-        countdownDisplay.innerText = countdownTime;
-
-        if (countdownTime <= 0) {
-            clearInterval(countdownInterval); // Stop the countdown
-            document.getElementById(bannerID).style.display = "none"; // Hide the specific banner
-        }
-    }, 1000); // 1000ms = 1 second
-}
-
-
-
-
 document.addEventListener('DOMContentLoaded', (event) => {
   const itemList = [
+    "Salamat Daks",
+    "Haunting of the Queen Mary",
+    "Summer",
+    "Ride On",
+    "Vacation Friends 2",
     "Meg 2 The Trench",
     "Wrong Turn",
     "Wrong Turn 2 Dead End",
