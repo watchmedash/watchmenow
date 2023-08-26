@@ -32,10 +32,12 @@
 }
 
 .banner {
-    flex: 0 0 13%;  /* Fixed width for banners */
+    flex: 0 0 13%;
+    min-width: 0; /* Add this line */
+    max-width: 100%; /* Add this line */
     width: 13%;
-    /* Add additional styling for banners here */
 }
+
 
 .dropdown-wrapper {
     display: flex;
