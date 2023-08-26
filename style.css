@@ -1,8 +1,20 @@
+.gallery-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.banner {
+    flex: 0 0 13%;  /* Fixed width for banners */
+    width: 13%;
+    /* Add additional styling for banners here */
+}
+
 .dropdown-wrapper {
     display: flex;
     align-items: center; /* Vertical alignment, if necessary */
     flex-wrap: nowrap;; /* Allows items to wrap onto multiple lines if they run out of space */
-    gap: 20px; /* Spacing between the dropdowns */
+    gap: 10px; /* Spacing between the dropdowns */
 }
 
 .dropdown-container {
@@ -46,14 +58,11 @@
 }
 
 
-
-
-
 .filter-button-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 2px;
   margin: 5px 0;
 }
 
@@ -83,7 +92,6 @@
 }
 
 
-
 .terra {
             display: flex;
             justify-content: center; /* centers horizontally */
@@ -91,7 +99,7 @@
             margin-bottom: 5px;
             margin-top: 5px;
         }
-/* Add the following styles to center the search container */
+
 .search-container {
   margin-top: 20px;
   text-align: center;
@@ -100,7 +108,6 @@
   margin-bottom: 0; /* Remove the margin at the bottom */
 }
 
-/* Add styles for the search bar and icon */
 .search-container form {
   padding: 8px; /* Add desired padding */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -136,7 +143,6 @@
 
 }
 
-/* Additional CSS code for the search results */
 #searchResults {
   position: absolute;
     z-index: 1000;
@@ -245,14 +251,12 @@ body {
   padding: 0;
 }
 
-/* Styles for the content sections */
 .content {
-  width: 85%; /* Set the width to 85% */
+  width: 100%;
   margin: 20px auto 0; /* Center the content horizontally and remove the top margin */
   flex: 1; /* Allow the content to expand and fill the remaining vertical space */
 }
 
-/* Existing CSS code for the navigation bar */
 nav {
   font-family: 'Exo 2', sans-serif;
   background: radial-gradient(circle, #FF3333, #770000);
@@ -289,11 +293,8 @@ nav {
    /* Adjust the opacity of the image */
 }
 
-
-
-/* Styles for the content sections */
 .content {
-  width: 85%; /* Set the width to 85% */
+  width: 85%;
   margin: 0 auto; /* Center the content horizontally and remove all margins */
 }
 
@@ -325,7 +326,6 @@ h1, h2, h3, p, li {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a deeper shadow effect */
 }
 
-/* Optionally, add hover effect for the button */
 .watch-now-button:hover {
     background-color: #cc0000;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Increase the shadow on hover */
@@ -610,17 +610,21 @@ footer .copyright {
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
+    width: 70%;  /* Set the width to 65% */
+    margin: 0 auto;  /* Center the gallery */
 }
+
 
 .gallery figure {
     flex: 1 0 calc(12.5% - 2%); /* 8 items per row */
     max-width: calc(12.5% - 2%);
     margin: 1%;
-    padding: 0; /* Reduce padding to 5px */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0;
     box-sizing: border-box;
-    background: none; /* Add a red to dark red gradient background */
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.0);
+    background: none;
+    border-radius: 1px;
     position: relative; /* Make corners rounded */
 }
 
@@ -635,15 +639,14 @@ footer .copyright {
     left: 0;
     right: 0;
     background: none; /* Semi-transparent light red to red gradient */
-    border-radius: 10px; /* Make corners rounded */
+    border-radius: 5px; /* Make corners rounded */
     z-index: -1; /* Place the pseudo-element behind the content */
 }
 
 .gallery figure img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
-     /* Make image corners rounded */
+    border-radius: 5px;
 }
 
 /* Adjust to 4 items per row for screens smaller than 600px */
@@ -654,7 +657,6 @@ footer .copyright {
     }
 }
 
-/* Styles for the image and the caption */
 .gallery img {
     width: 100%;
     height: auto;
@@ -663,23 +665,18 @@ footer .copyright {
 .gallery figcaption {
     text-align: center;
     font-family: 'Exo 2', sans-serif; /* Set font family to Exo 2 */
-    color: #fff; /* Change the font color to white */
-    width: 100%; /* Make the caption width same as image width */
+    color: #fff;
+    width: 100%;
     word-wrap: break-word;
-     /* Wrap the long titles to next line */
 }
 
 .title {
   margin-top: 10px;
   color: #fff;
   font-family: 'Exo 2', sans-serif;
-  font-size: 18px;
+  font-size: 12px;
 }
 
-/* Remove the buttons */
-.play-button {
-  display: none;
-}
 
 .pagination {
     text-align: center;
@@ -694,7 +691,6 @@ footer .copyright {
   text-decoration: none;
   font-family: 'Exo 2', sans-serif;
   font-size: 1.2rem;
-  /* No border-radius to keep them rectangular */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -703,21 +699,15 @@ footer .copyright {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
-
-/* Center-align buttons */
 .dropdown-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-/* Reduce space between buttons */
 .filter-button {
     margin: 0 5px; /* Adjust the value as per your design preference */
 }
 
-
-/* Increase space between genre buttons */
 .filter-button.genre-button {
     margin: 5px;  /* Adding margins to all sides for spacing */
 }
