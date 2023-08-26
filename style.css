@@ -24,21 +24,6 @@
     background-color: #b30000;  /* Darker red on hover */
 }
 
-
-.gallery-wrapper {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.banner {
-    flex: 0 0 13%;
-    min-width: 0; /* Add this line */
-    max-width: 100%; /* Add this line */
-    width: 13%;
-}
-
-
 .dropdown-wrapper {
     display: flex;
     align-items: center; /* Vertical alignment, if necessary */
@@ -639,7 +624,7 @@ footer .copyright {
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
-    width: 70%;  /* Set the width to 65% */
+    width: 95%;  /* Set the width to 65% */
     margin: 0 auto;  /* Center the gallery */
 }
 
