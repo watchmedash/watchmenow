@@ -1,4 +1,4 @@
-/* Cookie Consent Banner Styles */
+
 #cookieConsentBanner {
     position: fixed;
     bottom: 0;
@@ -14,7 +14,7 @@
 #acceptCookiesButton {
     margin-left: 20px;
     padding: 5px 20px;
-    background-color: red;  /* Changed to red */
+    background-color: darkred;  /* Changed to red */
     color: white;  /* Font color is white */
     border: none;
     cursor: pointer;
@@ -25,6 +25,7 @@
 }
 
 .dropdown-wrapper {
+  margin-top: 15px;
     display: flex;
     align-items: center; /* Vertical alignment, if necessary */
     flex-wrap: nowrap;; /* Allows items to wrap onto multiple lines if they run out of space */
@@ -32,7 +33,6 @@
 }
 
 .dropdown-container {
-    /* This will ensure that the dropdowns do not grow or shrink in size */
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -329,6 +329,7 @@ h1, h2, h3, p, li {
 }
 
 .watch-now-button {
+  margin-top: 15px;
     display: inline-block;
     padding: 10px 20px;
     background-color: #ff0000;
