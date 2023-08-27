@@ -1,41 +1,3 @@
-// Function to set a cookie
-function setCookie(name, value, days) {
-    const date = new Date();
-    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-    const expires = "expires=" + date.toUTCString();
-    document.cookie = name + "=" + value + ";" + expires + ";path=/";
-}
-
-// Function to get a cookie
-function getCookie(name) {
-    const cookieArray = document.cookie.split(';');
-    for(let i = 0; i < cookieArray.length; i++) {
-        let cookie = cookieArray[i];
-        while (cookie.charAt(0) === ' ') {
-            cookie = cookie.substring(1);
-        }
-        if (cookie.indexOf(name) === 0) {
-            return cookie.substring(name.length + 1, cookie.length);
-        }
-    }
-    return "";
-}
-
-// Check if user has already consented to cookies
-if (getCookie("cookieConsent") === "true") {
-    // User has consented. Hide the banner.
-    document.getElementById('cookieConsentBanner').style.display = 'none';
-} else {
-    // User has not consented. Show the banner.
-    document.getElementById('cookieConsentBanner').style.display = 'block';
-}
-
-// When user clicks "Accept", set a cookie to remember the consent
-document.getElementById('acceptCookiesButton').addEventListener('click', function() {
-    setCookie("cookieConsent", "true", 365);  // Set cookie for 1 year
-    document.getElementById('cookieConsentBanner').style.display = 'none';  // Hide the banner
-});
-
 
 
 document.addEventListener('DOMContentLoaded', (event) => {
@@ -251,4 +213,43 @@ document.addEventListener('DOMContentLoaded', (event) => {
   searchInput.addEventListener("input", performSearch);
   const searchResults = document.getElementById("searchResults");
   searchResults.style.display = "none";
+});
+
+
+// Function to set a cookie
+function setCookie(name, value, days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    const expires = "expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+
+// Function to get a cookie
+function getCookie(name) {
+    const cookieArray = document.cookie.split(';');
+    for(let i = 0; i < cookieArray.length; i++) {
+        let cookie = cookieArray[i];
+        while (cookie.charAt(0) === ' ') {
+            cookie = cookie.substring(1);
+        }
+        if (cookie.indexOf(name) === 0) {
+            return cookie.substring(name.length + 1, cookie.length);
+        }
+    }
+    return "";
+}
+
+// Check if user has already consented to cookies
+if (getCookie("cookieConsent") === "true") {
+    // User has consented. Hide the banner.
+    document.getElementById('cookieConsentBanner').style.display = 'none';
+} else {
+    // User has not consented. Show the banner.
+    document.getElementById('cookieConsentBanner').style.display = 'block';
+}
+
+// When user clicks "Accept", set a cookie to remember the consent
+document.getElementById('acceptCookiesButton').addEventListener('click', function() {
+    setCookie("cookieConsent", "true", 365);  // Set cookie for 1 year
+    document.getElementById('cookieConsentBanner').style.display = 'none';  // Hide the banner
 });
