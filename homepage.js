@@ -36,23 +36,13 @@ document.addEventListener('click', function(event) {
     }
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const allMoviesButton = document.querySelector('.all-movies-button');
-
-    if (allMoviesButton) { // Check if the element exists before adding the event listener
-        allMoviesButton.addEventListener('click', function() {
-            currentFilter = 'all';
-            currentGenreFilter = 'all';
-            currentPage = 1;
-            refreshGallery();
-        });
-    } else {
-        console.error("The 'all-movies-button' element was not found.");
-    }
-
-    // Rest of your code...
+const allMoviesButton = document.querySelector('.all-movies-button');
+allMoviesButton.addEventListener('click', function() {
+    currentFilter = 'all';
+    currentGenreFilter = 'all';
+    currentPage = 1;
+    refreshGallery();
 });
-
 
 const requestedButton = document.querySelector('.requested-button');
 requestedButton.addEventListener('click', function() {
