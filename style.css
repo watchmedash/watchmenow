@@ -296,24 +296,9 @@ nav {
    /* Adjust the opacity of the image */
 }
 
-.image-container2 {
-  text-align: center;
-  margin-top: 20px; /* Add some space below the nav bar */
-}
-
-.image-container2 img {
-  width: 70%;
-  max-width: 100%; /* Limit the width of the image to its original size */
-   /* Adjust the opacity of the image */
-}
-
 .content {
   width: 85%;
   margin: 0 auto; /* Center the content horizontally and remove all margins */
-}
-
-.watchmenow-info, .safety-info, .reasons-info {
-    margin-bottom: 20px; /* Add margin between content sections */
 }
 
 h1, h2, h3, p, li {
@@ -604,22 +589,6 @@ footer .copyright {
   font-family: 'Exo 2', sans-serif; /* Apply the "Exo 2" font to the copyright text */
 }
 
-/* Style for the form title with futuristic style */
-.futuristic-form {
-  max-width: 95%;
-  margin: 20px auto;
-  background: linear-gradient(to bottom, #ff0000, #000000); /* Red to black gradient background */
-  border-radius: 20px; /* Add rounded corners to the form */
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); /* Add a subtle glow effect */
-  color: #ff0000; /* Set font color to red */
-  padding: 30px; /* Add inner padding to the form */
-}
-
-.futuristic-form h2 {
-  color: red; /* Set form title font color to red */
-  margin-bottom: 20px;
-}
-
 
 .gallery {
     display: flex;
@@ -638,9 +607,6 @@ footer .copyright {
     box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.0);
     position: relative; /* Make corners rounded */
 }
-
-
-
 .gallery figure::before {
     content: "";
     display: block;
@@ -653,7 +619,6 @@ footer .copyright {
     border-radius: 10px; /* Make corners rounded */
     z-index: -1; /* Place the pseudo-element behind the content */
 }
-
 .gallery figure img {
     width: 100%;
     height: auto;
