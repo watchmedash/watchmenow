@@ -2,6 +2,9 @@
 
 document.addEventListener('DOMContentLoaded', (event) => {
   const itemList = [
+    "Tell Me a Creepy Story",
+    "The Dive",
+    "The Monkey King",
     "Salamat Daks",
     "Haunting of the Queen Mary",
     "Summer",
