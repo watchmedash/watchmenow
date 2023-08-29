@@ -2,6 +2,10 @@
 
 document.addEventListener('DOMContentLoaded', (event) => {
   const itemList = [
+    "Indiana Jones and the Dial of Destiny",
+    "Fall Guy",
+    "The Boogeyman",
+    "Kabayo",
     "Tell Me a Creepy Story",
     "The Dive",
     "The Monkey King",
