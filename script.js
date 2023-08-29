@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     "Fall Guy",
     "The Boogeyman",
     "Kabayo",
+    "The Wall",
     "Tell Me a Creepy Story",
     "The Dive",
     "The Monkey King",
