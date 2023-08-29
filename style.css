@@ -29,7 +29,7 @@
     display: flex;
     align-items: center; /* Vertical alignment, if necessary */
     flex-wrap: nowrap;; /* Allows items to wrap onto multiple lines if they run out of space */
-    gap: 10px; /* Spacing between the dropdowns */
+    gap: 5px; /* Spacing between the dropdowns */
 }
 
 .dropdown-container {
