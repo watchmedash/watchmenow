@@ -2,6 +2,12 @@
 
 document.addEventListener('DOMContentLoaded', (event) => {
   const itemList = [
+    "Ang mga kaibigan ni Mama Susan",
+    "Nightbird",
+    "Operation Napoleon",
+    "Sex Games",
+    "The Forbidden Kingdom",
+    "The Last Voyage of the Demeter",
     "Indiana Jones and the Dial of Destiny",
     "Fall Guy",
     "The Boogeyman",
