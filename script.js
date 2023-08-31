@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const itemList = [
     "Ang mga kaibigan ni Mama Susan",
     "Nightbird",
+    "One Piece",
     "Operation Napoleon",
     "Sex Games",
     "The Forbidden Kingdom",

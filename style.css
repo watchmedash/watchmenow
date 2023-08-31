@@ -1,3 +1,43 @@
+.episode-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+.episode-tab-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2px;
+  margin: 5px 0;
+}
+
+.episode-tab {
+  margin: 5px;
+  padding: 8px 15px;
+  background-color: #ff0000;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.episode-tab:hover {
+  background-color: #cc0000;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.episode-tab.active {
+  background-color: #cc0000;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+}
+
 
 #cookieConsentBanner {
     position: fixed;
