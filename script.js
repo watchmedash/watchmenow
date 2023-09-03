@@ -2,6 +2,9 @@
 
 document.addEventListener('DOMContentLoaded', (event) => {
   const itemList = [
+    "Kamadora",
+    "Kahalili",
+    "Die Hart",
     "Teenage Mutant Ninja Turtles Mutant Mayhem",
     "Ang mga kaibigan ni Mama Susan",
     "Nightbird",
