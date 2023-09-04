@@ -2,7 +2,7 @@
 .tiktok-link {
         background-color: #000; /* Black background color */
         color: #fff; /* White text color */
-        padding: 10px 20px; /* Padding around the link */
+        padding: 8px 15px; /* Padding around the link */
         border-radius: 12px; /* Rounded corners */
         text-decoration: none;
         font-family: 'Exo 2', sans-serif;
@@ -24,10 +24,6 @@
 
 /* Center-align the TikTok link */
 .tok {
-    text-align: center;
-}
-
-.fb {
     text-align: center;
 }
 
