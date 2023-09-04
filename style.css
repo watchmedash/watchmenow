@@ -350,11 +350,11 @@ h1, h2, h3, p, li {
 .button-container {
   padding: 10px 20px;
     text-align: center;
-    margin: 20px 0; /* Add some margin to separate the button from the content above */
+    margin: 5px 0; /* Add some margin to separate the button from the content above */
 }
 
 .watch-now-button {
-  margin-top: 15px;
+  margin-top: 5px;
     display: inline-block;
     padding: 10px 20px;
     background-color: #ff0000;
@@ -362,7 +362,7 @@ h1, h2, h3, p, li {
     text-decoration: none;
     font-family: 'Exo 2', sans-serif; /* Change the font to Exo 2 */
     font-size: 1.2rem;
-    border-radius: 30px; /* Increase the border radius to make it more rounded */
+    border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a deeper shadow effect */
 }
 
