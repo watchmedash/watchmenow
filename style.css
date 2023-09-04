@@ -392,7 +392,7 @@ body::after {
 }
 
 .logo-container {
-    margin-right: 10px; /* Add some spacing between the logo and the title */
+    margin-right: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Add a subtle bevel effect */
     display: flex; /* Add display flex to allow flex items to be aligned */
     align-items: center; /* Vertically center the logo inside the container */
@@ -401,8 +401,8 @@ body::after {
 }
 
 .logo-container img {
-    height: 100%; /* Set the logo's height to 100% of the container's height */
-    width: auto; /* Allow the logo's width to adjust automatically with the height */
+    height: 100%;
+    width: auto;
 }
 
 .nav-title {
