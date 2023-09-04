@@ -356,13 +356,13 @@ h1, h2, h3, p, li {
 .watch-now-button {
   margin-top: 5px;
     display: inline-block;
-    padding: 10px 20px;
+    padding: 8px 15px;
     background-color: #ff0000;
     color: #fff;
     text-decoration: none;
     font-family: 'Exo 2', sans-serif; /* Change the font to Exo 2 */
     font-size: 1.2rem;
-    border-radius: 20px;
+    border-radius: 14px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a deeper shadow effect */
 }
 
@@ -375,12 +375,12 @@ body::after {
   content: "";
   display: block;
   position: fixed;
-  top: 80px; /* To start below the navigation bar */
+  top: 1px; /* To start below the navigation bar */
   left: 0;
   width: 100%;
   height: calc(100% - 80px); /* Adjust the height to cover the remaining space between footer and page body */
-  background-image: url("https://watchmenow.live/images/bg.webp");
-  background-repeat: no-repeat; /* Set background-repeat to "no-repeat" to prevent the loop */
+  background-image: url("https://ofaishou.sirv.com/Images/bg.webp");
+  background-repeat: repeat-y;
   background-size: cover; /* Set background-size to "cover" to make the image cover the entire container */
   opacity: 0.3;
   z-index: -1;
