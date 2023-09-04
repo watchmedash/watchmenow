@@ -61,7 +61,7 @@
 }
 
 #acceptCookiesButton:hover {
-    background-color: #b30000;  /* Darker red on hover */
+    background-color: #b30000;
 }
 
 .dropdown-wrapper {
@@ -100,7 +100,7 @@
 }
 
 .dropdown-content a:hover {
-  background-color: #f5f5f5; /* Light grey background on hover */
+  background-color: #f5f5f5;
 }
 
 
@@ -368,7 +368,7 @@ h1, h2, h3, p, li {
 
 .watch-now-button:hover {
     background-color: #cc0000;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Increase the shadow on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
 body::after {
@@ -468,12 +468,11 @@ nav li a {
   /* Add the following styles to set a minimum font size for the links in the nav bar */
   min-font-size: 16px;
   font-size: max(min-font-size, 1.5vw);
-  /* Add hover color */
   transition: color 0.3s ease;
 }
 
 nav li a:hover {
-  color: red; /* Set the hover color to red */
+  color: black;
 }
 
 /* Add the following CSS to align the icons to the right side */
@@ -584,7 +583,7 @@ footer {
 }
 
 .footer-links a:hover {
-  color: red;
+  color: black;
 }
 
 .social-icons {
@@ -600,7 +599,7 @@ footer {
 }
 
 .social-icons a:hover {
-  color: red;
+  color: black;
 }
 
 /* Add margins to create space between the links and icons */
