@@ -2,6 +2,15 @@
 
 document.addEventListener('DOMContentLoaded', (event) => {
   const itemList = [
+    "The Adults",
+    "King of Killers",
+    "Hypnotic",
+    "Blended",
+    "Gran Turismo",
+    "Oppenheimer",
+    "Blue Beetle",
+    "The Equalizer 3",
+    "Mission Impossible - Dead Reckoning Part One",
     "Barbie",
     "Home Service",
     "Bugaw",

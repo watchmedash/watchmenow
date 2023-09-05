@@ -1,3 +1,27 @@
+.tag {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    background-color: rgba(0, 0, 0, 0.4); /* Transparent background with some opacity */
+    color: #fff;
+    font-family: 'Exo 2', sans-serif;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+/* Style for the "HD" tag */
+.hd {
+    background-color: rgba(0, 0, 255, 0.4) /* Blue color for HD */
+}
+
+.ts {
+    background-color: rgba(255, 255, 0, 0.4) /* Blue color for HD */
+}
+/* Style for the "SD" tag */
+.cam {
+    background-color: rgba(255, 0, 0, 0.4) /* Orange color for SD */
+}
+
 .episode-tabs {
   display: flex;
   justify-content: center;
