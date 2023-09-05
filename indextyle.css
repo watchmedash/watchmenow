@@ -1,3 +1,23 @@
+.book-icon {
+  font-size: 18px; /* Adjust the size as needed */
+  margin-left: 5px; /* Add spacing between the text and the icon */
+}
+
+.directory-link {
+  text-decoration: none; /* Remove underline */
+  color: white; /* Set font color to white */
+  font-family: 'Exo 2', sans-serif;
+  font-size: 18px; /* Font size */
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+.hand-icon {
+  font-size: 1.2em; /* Adjust the size as needed */
+  margin: 0 5px; /* Add some spacing between icons and text */
+}
+.directory-link:hover {
+  color: black; /* Set hover font color to black */
+}
 /* Style for the TikTok link */
 .tiktok-link {
         background-color: #000; /* Black background color */
