@@ -3,6 +3,8 @@
 document.addEventListener('DOMContentLoaded', (event) => {
   const itemList = [
     "The Adults",
+    "Call Me Alma",
+    "Punit na Langit",
     "Strays",
     "Here Comes the Boom",
     "King of Killers",
