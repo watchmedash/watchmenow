@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const itemList = [
     "The Adults",
     "Strays",
+    "Here Comes the Boom",
     "King of Killers",
     "Hypnotic",
     "Blended",
