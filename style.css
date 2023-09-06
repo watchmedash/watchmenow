@@ -290,7 +290,7 @@ figure img {
 .video-container {
   position: relative;
   overflow: hidden;
-  width: 74%;
+  width: 95%;
   padding-top: 56.25%; /* 16:9 Aspect Ratio */
   margin: 0 auto; /* Centering */
 }
