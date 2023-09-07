@@ -1,3 +1,39 @@
+/* styles.css */
+
+/* Style for the related movies container */
+.related-movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Style for each related movie card */
+.related-movie-card {
+    width: calc(50% - 10px); /* Adjust as needed to fit 2 cards per row */
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.related-movie-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.related-movie-card a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+}
+
+.related-movie-card p {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Add more CSS styles as needed */
+
+
 .tag {
     position: absolute;
     top: 3px;
