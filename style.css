@@ -1,37 +1,33 @@
-/* styles.css */
-
-/* Style for the related movies container */
+/* Add your CSS styling here */
 .related-movies {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    background-color: #f5f5f5;
+    padding: 20px;
 }
 
-/* Style for each related movie card */
-.related-movie-card {
-    width: calc(50% - 10px); /* Adjust as needed to fit 2 cards per row */
-    margin-bottom: 20px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-}
-
-.related-movie-card img {
-    max-width: 100%;
-    height: auto;
-}
-
-.related-movie-card a {
-    text-decoration: none;
-    color: #333;
-    display: block;
-    padding: 10px;
-}
-
-.related-movie-card p {
-    margin-top: 10px;
+.related-movie-item {
+    display: inline-block;
+    margin: 10px;
     text-align: center;
 }
 
-/* Add more CSS styles as needed */
+.related-movie-item img {
+    max-width: 180px;
+    height: auto;
+}
+
+.related-movie-item p {
+    margin: 5px 0;
+}
+
+.tag {
+    background-color: #333;
+    color: #fff;
+    padding: 2px 5px;
+    font-size: 12px;
+    margin-top: 5px;
+    display: inline-block;
+    border-radius: 3px;
+}
 
 
 .tag {
