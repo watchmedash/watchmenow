@@ -211,18 +211,21 @@
   const currentlyViewedGenre = urlParams.get("genre");
 
   // Retrieve movieData from localStorage
+  // Retrieve movieData from localStorage
   const movieData = JSON.parse(localStorage.getItem("movieData"));
+
+  console.log("Retrieved Movie Data:", movieData); // Check the output in the console
+
 
   // Filter and display related movies
   const relatedMoviesContainer = document.querySelector(".related-movies-list");
 
   movieData.forEach((movie) => {
-    // Check if the movie's genre matches the currently viewed genre
-    if (movie.genre.includes(currentlyViewedGenre)) {
-      // Create HTML elements to display the related movie
-      // Append them to relatedMoviesContainer
-    }
-  });
+  if (movie.genre.includes(currentlyViewedGenre)) {
+    // Create HTML elements to display the related movie
+    // Append them to relatedMoviesContainer
+  }
+});
 </script>
 </body>
 </html>
