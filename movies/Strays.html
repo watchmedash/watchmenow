@@ -206,51 +206,23 @@
 <script src="../video.min.js">
 </script>
 <script>
-  // Extract the genre parameter from the URL (e.g., "?genre=adv,com,dra")
+  // Extract the genre parameter from the URL
   const urlParams = new URLSearchParams(window.location.search);
   const currentlyViewedGenre = urlParams.get("genre");
 
-  // Filter the movieData array to display related movies
-  const relatedMoviesContainer = document.querySelector(".related-movies-list");
-  const maxRelatedMovies = 8; // Set the maximum number of related movies
+  // Retrieve movieData from localStorage
+  const movieData = JSON.parse(localStorage.getItem("movieData"));
 
-  let relatedMoviesCount = 0;
+  // Filter and display related movies
+  const relatedMoviesContainer = document.querySelector(".related-movies-list");
 
   movieData.forEach((movie) => {
     // Check if the movie's genre matches the currently viewed genre
-    if (
-      relatedMoviesCount < maxRelatedMovies &&
-      movie.genre.includes(currentlyViewedGenre)
-    ) {
-      // Create HTML elements to display the related movie (e.g., create figure, img, etc.)
-      const figure = document.createElement("figure");
-      const a = document.createElement("a");
-      const img = document.createElement("img");
-      const span = document.createElement("span");
-      const figcaption = document.createElement("figcaption");
-
-      figure.setAttribute("data-genre", movie.genre.join(","));
-      a.setAttribute("class", "movie-link");
-      a.setAttribute("href", movie.href);
-      img.setAttribute("alt", movie.title);
-      img.setAttribute("class", "defer-image");
-      img.setAttribute("data-src", movie.posterURL);
-      img.setAttribute("height", "240");
-      img.setAttribute("width", "180");
-      span.setAttribute("class", "tag");
-      span.textContent = "HD"; // You can modify this based on your data
-      figcaption.textContent = movie.title;
-
-      a.appendChild(img);
-      a.appendChild(span);
-      figure.appendChild(a);
-      figure.appendChild(figcaption);
-
-      relatedMoviesContainer.appendChild(figure);
-      relatedMoviesCount++;
+    if (movie.genre.includes(currentlyViewedGenre)) {
+      // Create HTML elements to display the related movie
+      // Append them to relatedMoviesContainer
     }
   });
 </script>
-
 </body>
 </html>
