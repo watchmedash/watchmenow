@@ -372,7 +372,7 @@ h1, h2, h3, p, li {
 
 
 .button-container {
-  padding: 10px 20px;
+  padding: 8px 16px;
     text-align: center;
     margin: 5px 0; /* Add some margin to separate the button from the content above */
 }
@@ -386,7 +386,7 @@ h1, h2, h3, p, li {
     text-decoration: none;
     font-family: 'Exo 2', sans-serif; /* Change the font to Exo 2 */
     font-size: 1.2rem;
-    border-radius: 14px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a deeper shadow effect */
 }
 

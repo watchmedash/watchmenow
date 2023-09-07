@@ -1,8 +1,47 @@
-.button-container {
-  padding: 10px 20px;
-    text-align: center;
-    margin: 5px 0; /* Add some margin to separate the button from the content above */
+/* Style for the container div */
+.social-icons-container {
+  text-align: center; /* Center-align the icons */
+  margin-top: 1px; /* Add some top margin for spacing */
 }
+
+/* Style for individual social media icons */
+.social-icon {
+  display: inline-block; /* Display icons in a row */
+  margin: 0 5px; /* Add horizontal spacing between icons */
+  position: relative;
+  transition: transform 0.2s ease-in-out; /* Add a smooth transition for the hover effect */
+}
+
+.social-icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-47%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Adjust the shadow color and opacity */
+  border-radius: 50%;
+  z-index: -1; /* Place the shadow behind the icon */
+  transition: background-color 0.2s ease-in-out; /* Add a smooth transition for the hover effect */
+}
+
+/* Style for the social media icon images */
+.social-icon img {
+  width: 60px; /* Adjust the width of the icons */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Hover effect: change the background color of the icons */
+.social-icon:hover::before {
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the hover color and opacity */
+}
+
+/* Hover effect: scale up the icon slightly on hover */
+.social-icon:hover {
+  transform: scale(1.1); /* Increase the size by 10% on hover */
+}
+
 .showPopUp {
   margin-top: 5px;
     display: inline-block;
@@ -64,60 +103,11 @@
 .directory-link:hover {
   color: black; /* Set hover font color to black */
 }
-/* Style for the TikTok link */
-.tiktok-link {
-        background-color: #000; /* Black background color */
-        color: #fff; /* White text color */
-        padding: 8px 15px; /* Padding around the link */
-        border-radius: 12px; /* Rounded corners */
-        text-decoration: none;
-        font-family: 'Exo 2', sans-serif;
-        font-size: 18px; /* Font size */
-        transition: background-color 0.3s ease; /* Smooth background color transition */
-    }
-
-    /* Style for the TikTok logo */
-       .tiktok-logo::before {
-           content: "\e07b"; /* Unicode for the TikTok logo */
-           font-family: FontAwesome; /* Use FontAwesome for the logo */
-           margin-right: 5px; /* Add a small margin to separate the logo from text */
-           font-size: 20px; /* Adjust the size of the logo */
-       }
-    /* Hover effect: Change background color on hover */
-    .tiktok-link:hover {
-        background-color: #333; /* Darker black on hover */
-    }
-
 /* Center-align the TikTok link */
 .tok {
+  margin-top: 5px;
     text-align: center;
 }
-
-/* Style for the Facebook link */
-   .facebook-link {
-       background-color: #1877f2; /* Facebook blue background color */
-       color: #fff; /* White text color */
-       padding: 8px 15px; /* Padding around the link */
-       border-radius: 12px; /* Rounded corners */
-       text-decoration: none;
-       font-family: 'Exo 2', sans-serif;
-       font-size: 18px; /* Font size */
-       transition: background-color 0.3s ease; /* Smooth background color transition */
-       display: inline-block; /* Display as inline-block to allow for icon placement */
-   }
-
-   /* Style for the Facebook icon */
-   .fa-facebook-square::before {
-       content: "\f082"; /* Unicode for the Facebook icon in Font Awesome */
-       font-family: FontAwesome; /* Use FontAwesome for the icon */
-       margin-right: 5px; /* Add a small margin to separate the icon from text */
-       font-size: 22px; /* Adjust the size of the icon */
-   }
-
-   /* Hover effect: Change background color on hover */
-   .facebook-link:hover {
-       background-color: #0e5cbf; /* Darker blue on hover */
-   }
 
 .hot-movies-gallery {
     display: flex;
