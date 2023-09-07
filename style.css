@@ -1,32 +1,43 @@
-/* Add your CSS styling here */
+/* Style for the Related Movies section */
 .related-movies {
-    background-color: #f5f5f5;
+    margin-top: 30px;
     padding: 20px;
+    background-color: #f7f7f7;
 }
 
-.related-movie-item {
+.related-movies h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Style for each related movie item */
+.related-movies-list figure {
     display: inline-block;
     margin: 10px;
     text-align: center;
 }
 
-.related-movie-item img {
-    max-width: 180px;
+.related-movies-list img {
+    max-width: 100%;
     height: auto;
 }
 
-.related-movie-item p {
-    margin: 5px 0;
+.related-movies-list figcaption {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #333;
 }
 
-.tag {
+/* Style for the HD and Cam tags */
+.related-movies-list .tag {
     background-color: #333;
     color: #fff;
-    padding: 2px 5px;
-    font-size: 12px;
-    margin-top: 5px;
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-top: 6px;
     display: inline-block;
-    border-radius: 3px;
 }
 
 
