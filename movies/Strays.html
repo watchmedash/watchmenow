@@ -206,32 +206,60 @@
 <script src="../video.min.js">
 </script>
 <script>
-  // Extract the genre parameter from the URL
-  const urlParams = new URLSearchParams(window.location.search);
-  const currentlyViewedGenre = urlParams.get("genre");
+    // Extract the genre parameter from the URL (e.g., "?genre=adv,com,dra")
+    const urlParams = new URLSearchParams(window.location.search);
+    const currentlyViewedGenre = urlParams.get("genre");
 
-  // Retrieve movieData from localStorage
-  // Retrieve movieData from localStorage
-  const movieData = JSON.parse(localStorage.getItem("movieData"));
+    // Retrieve movie data from localStorage
+    const movieData = JSON.parse(localStorage.getItem("movieData"));
 
-  console.log("Retrieved Movie Data:", movieData); // Check the output in the console
+    // Select the container where you want to display related movies
+    const relatedMoviesContainer = document.querySelector(".related-movies-list");
 
+    // Function to filter and display related movies
+    function displayRelatedMovies() {
+      movieData.forEach((movie) => {
+        // Check if the movie's genre matches the currently viewed genre
+        if (movie.genre.includes(currentlyViewedGenre)) {
+          // Create a figure element for the related movie
+          const relatedMovieFigure = document.createElement("figure");
 
-  // Filter and display related movies
-  const relatedMoviesContainer = document.querySelector(".related-movies-list");
+          // Create an anchor element for the movie link
+          const movieLink = document.createElement("a");
+          movieLink.classList.add("movie-link");
+          movieLink.href = movie.href;
 
-  // Assuming relatedMoviesContainer is the parent element
-movieData.forEach((movie) => {
-  if (movie.genre.includes(currentlyViewedGenre)) {
-    const figure = document.createElement("figure");
+          // Create an image element for the movie poster
+          const moviePoster = document.createElement("img");
+          moviePoster.alt = movie.title;
+          moviePoster.classList.add("defer-image");
+          moviePoster.setAttribute("data-src", movie.posterURL);
+          moviePoster.height = 240;
+          moviePoster.width = 180;
 
-    // Create other elements and set their content, e.g., img, a, figcaption, etc.
-    // Append those elements to the figure
+          // Create a span element for the HD/Cam tag
+          const movieTag = document.createElement("span");
+          movieTag.classList.add("tag", movie.quality);
+          movieTag.textContent = movie.quality.toUpperCase();
 
-    // Append the figure to relatedMoviesContainer
-    relatedMoviesContainer.appendChild(figure);
-  }
-});
-</script>
+          // Create a figcaption element for the movie title
+          const movieTitle = document.createElement("figcaption");
+          movieTitle.textContent = movie.title;
+
+          // Append elements to the figure and anchor
+          movieLink.appendChild(moviePoster);
+          movieLink.appendChild(movieTag);
+          relatedMovieFigure.appendChild(movieLink);
+          relatedMovieFigure.appendChild(movieTitle);
+
+          // Append the related movie figure to the container
+          relatedMoviesContainer.appendChild(relatedMovieFigure);
+        }
+      });
+    }
+
+    // Call the function to display related movies
+    displayRelatedMovies();
+  </script>
 </body>
 </html>
