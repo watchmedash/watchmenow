@@ -1867,28 +1867,41 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <script>
-  const galleryItems = document.querySelectorAll(".gallery figure");
-  const movieData = [];
+  // Ensure the DOM is loaded before running the script
+  document.addEventListener("DOMContentLoaded", function () {
+    const galleryItems = document.querySelectorAll(".gallery figure");
+    const movieData = [];
 
-  galleryItems.forEach((item) => {
-    const title = item.querySelector("figcaption").textContent.trim();
-    const genre = item.getAttribute("data-genre").split(",");
-    const releaseYear = parseInt(item.getAttribute("data-release-year"));
-    const posterURL = item.querySelector("img").getAttribute("data-src");
-    const href = item.querySelector(".movie-link").getAttribute("href");
+    galleryItems.forEach((item) => {
+      const titleElement = item.querySelector("figcaption");
+      const genreAttribute = item.getAttribute("data-genre");
+      const releaseYearAttribute = item.getAttribute("data-release-year");
+      const imgElement = item.querySelector("img");
+      const movieLinkElement = item.querySelector(".movie-link");
 
-    movieData.push({
-      title,
-      genre,
-      releaseYear,
-      posterURL,
-      href,
+      // Check if all required elements exist before extracting data
+      if (titleElement && genreAttribute && releaseYearAttribute && imgElement && movieLinkElement) {
+        const title = titleElement.textContent.trim();
+        const genre = genreAttribute.split(",");
+        const releaseYear = parseInt(releaseYearAttribute);
+        const posterURL = imgElement.getAttribute("data-src");
+        const href = movieLinkElement.getAttribute("href");
+
+        movieData.push({
+          title,
+          genre,
+          releaseYear,
+          posterURL,
+          href,
+        });
+      }
     });
-  });
 
-  // Store movieData in localStorage
-  localStorage.setItem("movieData", JSON.stringify(movieData));
+    // Store movieData in localStorage
+    localStorage.setItem("movieData", JSON.stringify(movieData));
+  });
 </script>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="homepage.js"></script> <script src="script.js"></script><script src="defer-images.js"></script>
