@@ -220,10 +220,16 @@
   // Filter and display related movies
   const relatedMoviesContainer = document.querySelector(".related-movies-list");
 
-  movieData.forEach((movie) => {
+  // Assuming relatedMoviesContainer is the parent element
+movieData.forEach((movie) => {
   if (movie.genre.includes(currentlyViewedGenre)) {
-    // Create HTML elements to display the related movie
-    // Append them to relatedMoviesContainer
+    const figure = document.createElement("figure");
+
+    // Create other elements and set their content, e.g., img, a, figcaption, etc.
+    // Append those elements to the figure
+
+    // Append the figure to relatedMoviesContainer
+    relatedMoviesContainer.appendChild(figure);
   }
 });
 </script>
