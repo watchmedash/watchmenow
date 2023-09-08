@@ -120,10 +120,6 @@
          	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://perilastronaut.com/58513019b253ebaee35f854f5e4ae060/invoke.js"></scr' + 'ipt>');
    </script>
 </div>
-<div class="related-movies">
-  <h2>Related Movies</h2>
-  <div class="related-movies-list"></div>
-</div>
 <div class="button-container">
 <div id="yandex_rtb_R-A-2752621-2">
 </div>
@@ -205,61 +201,5 @@
 </script>
 <script src="../video.min.js">
 </script>
-<script>
-    // Extract the genre parameter from the URL (e.g., "?genre=adv,com,dra")
-    const urlParams = new URLSearchParams(window.location.search);
-    const currentlyViewedGenre = urlParams.get("genre");
-
-    // Retrieve movie data from localStorage
-    const movieData = JSON.parse(localStorage.getItem("movieData"));
-
-    // Select the container where you want to display related movies
-    const relatedMoviesContainer = document.querySelector(".related-movies-list");
-
-    // Function to filter and display related movies
-    function displayRelatedMovies() {
-      movieData.forEach((movie) => {
-        // Check if the movie's genre matches the currently viewed genre
-        if (movie.genre.includes(currentlyViewedGenre)) {
-          // Create a figure element for the related movie
-          const relatedMovieFigure = document.createElement("figure");
-
-          // Create an anchor element for the movie link
-          const movieLink = document.createElement("a");
-          movieLink.classList.add("movie-link");
-          movieLink.href = movie.href;
-
-          // Create an image element for the movie poster
-          const moviePoster = document.createElement("img");
-          moviePoster.alt = movie.title;
-          moviePoster.classList.add("defer-image");
-          moviePoster.setAttribute("data-src", movie.posterURL);
-          moviePoster.height = 240;
-          moviePoster.width = 180;
-
-          // Create a span element for the HD/Cam tag
-          const movieTag = document.createElement("span");
-          movieTag.classList.add("tag", movie.quality);
-          movieTag.textContent = movie.quality.toUpperCase();
-
-          // Create a figcaption element for the movie title
-          const movieTitle = document.createElement("figcaption");
-          movieTitle.textContent = movie.title;
-
-          // Append elements to the figure and anchor
-          movieLink.appendChild(moviePoster);
-          movieLink.appendChild(movieTag);
-          relatedMovieFigure.appendChild(movieLink);
-          relatedMovieFigure.appendChild(movieTitle);
-
-          // Append the related movie figure to the container
-          relatedMoviesContainer.appendChild(relatedMovieFigure);
-        }
-      });
-    }
-
-    // Call the function to display related movies
-    displayRelatedMovies();
-  </script>
 </body>
 </html>
