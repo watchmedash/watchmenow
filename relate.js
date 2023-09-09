@@ -24,6 +24,14 @@ loadPage('../home.html', function(data) {
       const currentGenre1 = currentMovie1.getAttribute('data-genre');
       const currentGenre2 = currentMovie2.getAttribute('data-genre');
 
+      // Update the href attributes of movie links
+      const movieLinks = tempElement.querySelectorAll('.movie-link');
+      movieLinks.forEach(link => {
+         const originalHref = link.getAttribute('href');
+         const updatedHref = originalHref.replace('movies/', '');
+         link.setAttribute('href', updatedHref);
+      });
+
       // Filter related movies based on the genre of both current movies
       const movieFigures = tempElement.querySelectorAll('.gallery figure');
       const relatedMovies = Array.from(movieFigures).filter(figure => {
