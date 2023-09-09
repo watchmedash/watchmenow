@@ -3,15 +3,13 @@
   margin-top: 20px;
   display: flex;
   flex-wrap: nowrap; /* Prevent wrapping to a new line */
-  overflow-x: auto; /* Add horizontal scroll for small screens */
 }
 
 /* Style each related movie item */
 .related-movies-gallery figure {
   flex: 0 0 calc(20% - 20px); /* Adjust the width as needed to fit 5 movies in a row */
   margin: 0 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+  border-radius: 3px;
   overflow: hidden;
 }
 
@@ -20,7 +18,7 @@
   text-align: center;
   color: #fff;
   font-family: 'Exo 2', sans-serif;
-  padding: 8px;
+  padding: 2px;
 }
 
 /* Style the movie image */
@@ -32,9 +30,8 @@
 /* Style the HD tag */
 .related-movies-gallery .tag.hd {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #f00;
+  top: 2px;
+  right: 2px;
   color: #fff;
   padding: 4px 8px;
   border-radius: 3px;
