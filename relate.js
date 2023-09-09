@@ -15,35 +15,24 @@ loadPage('../home.html', function(data) {
    const tempElement = document.createElement('div');
    tempElement.innerHTML = data;
 
-   // Update the IDs for the current movies
-   const currentMovie1 = tempElement.querySelector('#current-movie-1');
-   const currentMovie2 = tempElement.querySelector('#current-movie-2');
+   // Update the href attributes of movie links
+   const movieLinks = tempElement.querySelectorAll('.movie-link');
+   movieLinks.forEach(link => {
+      const originalHref = link.getAttribute('href');
+      const updatedHref = originalHref.replace('movies/', '');
+      link.setAttribute('href', updatedHref);
+   });
 
-   // Check if the current movies exist and have genres
-   if (currentMovie1 && currentMovie2) {
-      const currentGenre1 = currentMovie1.getAttribute('data-genre');
-      const currentGenre2 = currentMovie2.getAttribute('data-genre');
+   // Find all movie figures
+   const movieFigures = tempElement.querySelectorAll('.gallery figure');
 
-      // Update the href attributes of movie links
-      const movieLinks = tempElement.querySelectorAll('.movie-link');
-      movieLinks.forEach(link => {
-         const originalHref = link.getAttribute('href');
-         const updatedHref = originalHref.replace('movies/', '');
-         link.setAttribute('href', updatedHref);
-      });
+   // Randomly shuffle the related movies array
+   const relatedMovies = Array.from(movieFigures).sort(() => Math.random() - 0.5);
 
-      // Filter related movies based on the genre of both current movies
-      const movieFigures = tempElement.querySelectorAll('.gallery figure');
-      const relatedMovies = Array.from(movieFigures).filter(figure => {
-         const figureGenre = figure.getAttribute('data-genre');
-         return figureGenre && (figureGenre.includes(currentGenre1) || figureGenre.includes(currentGenre2));
-      });
-
-      // Display the related movies in the gallery
-      const relatedMoviesGallery = document.querySelector('.related-movies-gallery');
-      relatedMovies.forEach(figure => {
-         const clonedFigure = figure.cloneNode(true);
-         relatedMoviesGallery.appendChild(clonedFigure);
-      });
-   }
+   // Display the first 5 related movies in the gallery
+   const relatedMoviesGallery = document.querySelector('.related-movies-gallery');
+   relatedMovies.slice(0, 4).forEach(figure => {
+      const clonedFigure = figure.cloneNode(true);
+      relatedMoviesGallery.appendChild(clonedFigure);
+   });
 });
