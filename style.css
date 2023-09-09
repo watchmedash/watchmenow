@@ -1,3 +1,52 @@
+/* Style the related movies gallery container */
+.related-movies-gallery {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Style each related movie item */
+.related-movies-gallery figure {
+  width: calc(25% - 20px); /* Adjust the width as needed to fit your layout */
+  margin: 0 10px 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* Style the movie title */
+.related-movies-gallery figcaption {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 8px;
+}
+
+/* Style the movie image */
+.related-movies-gallery img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style the HD tag */
+.related-movies-gallery .tag.hd {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #f00;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 3px;
+}
+
+/* Add hover effect */
+.related-movies-gallery figure:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+
 .tag {
     position: absolute;
     top: 3px;
