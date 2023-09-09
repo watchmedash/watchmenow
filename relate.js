@@ -31,7 +31,7 @@ loadPage('../home.html', function(data) {
 
    // Display the first 5 related movies in the gallery
    const relatedMoviesGallery = document.querySelector('.related-movies-gallery');
-   relatedMovies.slice(0, 4).forEach(figure => {
+   relatedMovies.slice(0, 5).forEach(figure => {
       const clonedFigure = figure.cloneNode(true);
       relatedMoviesGallery.appendChild(clonedFigure);
    });
