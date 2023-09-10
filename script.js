@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const itemList = [
     "The Adults",
     "Sakra",
+    "Sitting in Bars with Cake",
+    "I Am Legend",
+    "The Nun II",
     "Sentinelle",
     "Jailer",
     "Call Me Alma",
