@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const itemList = [
     "The Adults",
     "Sakra",
+    "Birth-Rebirth",
     "Three Thousand Years of Longing",
     "Sitting in Bars with Cake",
     "I Am Legend",
