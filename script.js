@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded', (event) => {
   const itemList = [
     "The Adults",
+    "Patikim-tikim",
     "Sakra",
     "Birth-Rebirth",
     "Manhole",
