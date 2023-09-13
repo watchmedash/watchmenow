@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     "The Adults",
     "Patikim-tikim",
     "Sakra",
+    "Ahsoka",
     "Birth-Rebirth",
     "Manhole",
     "7-11 PM",

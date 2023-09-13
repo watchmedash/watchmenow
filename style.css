@@ -68,6 +68,10 @@
     background-color: rgba(255, 0, 0, 0.4) /* Orange color for SD */
 }
 
+.tv {
+  background-color: rgba(0, 255, 0, 0.4);
+}
+
 .episode-tabs {
   display: flex;
   justify-content: center;
