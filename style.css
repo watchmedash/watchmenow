@@ -1,3 +1,21 @@
+.announcement-banner {
+    background-color: rgba(0, 108, 242, 0.7);
+    color: #ffffff;
+    padding: 5px;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Exo 2', sans-serif;
+    position: relative; /* or use "absolute" if needed */
+}
+.announcement-banner p {
+      margin: 0; /* Remove default paragraph margins */
+  }
+
+  .announcement-banner a {
+      color: white; /* Set the email link color to black */
+      text-decoration: none; /* Remove underline from the email link */
+  }
+
 /* Style the related movies gallery container */
 .related-movies-gallery {
   margin-top: 20px;
