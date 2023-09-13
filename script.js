@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     "Sakra",
     "Ahsoka",
     "Birth-Rebirth",
+    "The Seven Deadly Sins Grudge of Edinburgh",
+    "The Seven Deadly Sins Grudge of Edinburgh Part 2",
     "Manhole",
     "7-11 PM",
     "Captive",
