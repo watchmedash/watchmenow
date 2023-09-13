@@ -128,21 +128,37 @@ $('.prev-page').click(function(e) {
 
 $('.next-page').click(function(e) {
     e.preventDefault();
-    currentPage++;
+    console.log('Before Next click - currentPage:', currentPage);
 
-    const totalItems = currentFilter === 'all'
-        ? movies.length
-        : [...movies].filter(movie => movie.getAttribute('data-release-year') === currentFilter).length;
+    if (currentFilter === 'requested') {
+        const requestedMovies = [...movies].filter(movie => movie.getAttribute('data-requested') === 'true');
+        const totalRequestedItems = requestedMovies.length;
+        const numRequestedPages = Math.ceil(totalRequestedItems / perPage);
 
-    const numPages = Math.ceil(totalItems / perPage);
+        if (currentPage < numRequestedPages) {
+            currentPage++;
+        } else {
+            currentPage = 1;
+        }
+    } else {
+        currentPage++;
 
-    if (currentPage > numPages) {
-        currentPage = 1;
+        const totalItems = currentFilter === 'all'
+            ? movies.length
+            : [...movies].filter(movie => movie.getAttribute('data-release-year') === currentFilter).length;
+
+        const numPages = Math.ceil(totalItems / perPage);
+
+        if (currentPage > numPages) {
+            currentPage = 1;
+        }
     }
 
+    console.log('After Next click - currentPage:', currentPage);
     refreshGallery();
     history.pushState({ page: currentPage }, "", "?page=" + currentPage);
 });
+
 
 window.onpopstate = function(event) {
     if (event.state && event.state.page) {

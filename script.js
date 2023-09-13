@@ -2,6 +2,18 @@
 
 document.addEventListener('DOMContentLoaded', (event) => {
   const itemList = [
+    "Hugot",
+    "Tayuan",
+    "Paupahan",
+    "Lawa",
+    "Lagaslas",
+    "Hosto",
+    "Hilom",
+    "AFAM",
+    "Litsoneras",
+    "Manyak",
+    "Sandwich",
+    "Bisyo! Adik Ka Ba",
     "The Adults",
     "Patikim-tikim",
     "Sakra",

@@ -5,7 +5,8 @@
     text-align: center;
     font-size: 15px;
     font-family: 'Exo 2', sans-serif;
-    position: relative; /* or use "absolute" if needed */
+    position: relative;
+    border: 2px solid rgba(0, 108, 242, 0.9);
 }
 .announcement-banner p {
       margin: 0; /* Remove default paragraph margins */
