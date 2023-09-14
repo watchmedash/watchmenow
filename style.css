@@ -257,7 +257,6 @@
 
 .search-container form {
   padding: 8px; /* Add desired padding */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   position: relative;
   display: flex;
   width: 80%;
@@ -303,8 +302,7 @@
   background-color: rgba(255, 255, 255, 1); /* Add some transparency to the background */
   border-radius: 5px;
   color: red; /* Set the font color to red */
-  font-family: 'Exo 2', sans-serif; /* Apply the "Exo 2" font to the search results */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  font-family: 'Exo 2', sans-serif;
   font-weight: bold;
 }
 
@@ -443,7 +441,6 @@ h1, h2, h3, p, li {
 .button-container {
   padding: 8px 16px;
     text-align: center;
-    margin: 5px 0; /* Add some margin to separate the button from the content above */
 }
 
 .watch-now-button {

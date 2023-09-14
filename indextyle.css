@@ -42,48 +42,6 @@
   transform: scale(1.1); /* Increase the size by 10% on hover */
 }
 
-.showPopUp {
-  margin-top: 5px;
-    display: inline-block;
-    padding: 8px 15px;
-    background-color: #ff0000;
-    color: #fff;
-    text-decoration: none;
-    font-family: 'Exo 2', sans-serif; /* Change the font to Exo 2 */
-    font-size: 1.2rem;
-    border-radius: 14px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a deeper shadow effect */
-}
-
-.showPopUp:hover {
-    background-color: #cc0000;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-}
-/* Customize the pop-up container */
-.swal2-popup {
-    background-color: #ff5733; /* Red background color */
-    font-family: 'Exo 2', sans-serif; /* Apply Exo 2 font */
-}
-
-/* Customize the pop-up title */
-.swal2-title {
-    font-size: 24px;
-    color: white; /* White font color */
-}
-
-/* Customize the pop-up text */
-.swal2-content {
-    font-size: 18px;
-    color: white; /* White font color */
-}
-
-/* Customize the confirm button */
-.swal2-confirm {
-    background-color: #ff5733; /* Red background color */
-    color: white; /* White font color */
-    font-size: 16px;
-}
-
 .book-icon {
   font-size: 18px; /* Adjust the size as needed */
   margin-left: 5px; /* Add spacing between the text and the icon */
@@ -103,9 +61,9 @@
 .directory-link:hover {
   color: black; /* Set hover font color to black */
 }
-/* Center-align the TikTok link */
+
 .tok {
-  margin-top: 5px;
+  margin-top: 1px;
     text-align: center;
 }
 
