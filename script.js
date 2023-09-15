@@ -2,6 +2,11 @@
 
 document.addEventListener('DOMContentLoaded', (event) => {
   const itemList = [
+    "Real Steel",
+    "Once Upon a Crime",
+    "Elevator Game",
+    "A Haunting in Venice",
+    "Big Stan",
     "Hugot",
     "Tayuan",
     "Paupahan",
