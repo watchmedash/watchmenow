@@ -2,6 +2,9 @@
 
 document.addEventListener('DOMContentLoaded', (event) => {
   const itemList = [
+    "The Island",
+    "Mother, May I",
+    "Ehrengard - The Art of Seduction",
     "Real Steel",
     "Once Upon a Crime",
     "Elevator Game",
