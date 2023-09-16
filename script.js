@@ -2,6 +2,13 @@
 
 document.addEventListener('DOMContentLoaded', (event) => {
   const itemList = [
+    "Retribution",
+    "Love at First Sight",
+    "Grown Ups",
+    "Grown Ups 2",
+    "The Hangover",
+    "The Hangover Part II",
+    "The Hangover Part III",
     "The Island",
     "Mother, May I",
     "Ehrengard - The Art of Seduction",
