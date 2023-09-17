@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded', (event) => {
   const itemList = [
     "Retribution",
+    "Island Escape",
     "Love at First Sight",
     "Grown Ups",
     "Grown Ups 2",
