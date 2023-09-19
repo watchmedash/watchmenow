@@ -2,6 +2,8 @@
 
 document.addEventListener('DOMContentLoaded', (event) => {
   const itemList = [
+    "Expend4bles",
+    "The Haunting at Saint Joseph s",
     "Moneyball",
     "Ligaw na Bulaklak",
     "Jeanne du Barry",
