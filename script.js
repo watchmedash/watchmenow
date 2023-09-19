@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded', (event) => {
   const itemList = [
     "Moneyball",
+    "Ligaw na Bulaklak",
     "Jeanne du Barry",
     "Retribution",
     "Island Escape",
