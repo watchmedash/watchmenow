@@ -2,6 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', (event) => {
   const itemList = [
+    "Moneyball",
     "Jeanne du Barry",
     "Retribution",
     "Island Escape",
