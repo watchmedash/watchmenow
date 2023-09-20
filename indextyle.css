@@ -1,3 +1,109 @@
+.image-container {
+    text-align: center; /* Center the content horizontally */
+}
+
+.image-link {
+    display: inline-block; /* Ensure the link wraps around the image and text */
+    text-decoration: none; /* Remove underline from the link */
+    color: white; /* Font color for the link */
+}
+
+.shaking-image {
+    margin-top: 5px; /* Adjust the margin to bring the image and text closer */
+    font-size: 1.2rem; /* Adjust the font size as needed */
+    color: white; /* Font color for the image */
+    animation: shake 2s infinite; /* Shake animation */
+}
+
+.join-text {
+    font-size: 1.2rem; /* Adjust the font size as needed */
+    color: white; /* Font color for the text */
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    10% {
+        transform: translate(-5px, -5px);
+    }
+    20% {
+        transform: translate(5px, -5px);
+    }
+    30% {
+        transform: translate(-5px, 5px);
+    }
+    40% {
+        transform: translate(5px, 5px);
+    }
+    50% {
+        transform: translate(-5px, -5px);
+    }
+    60% {
+        transform: translate(5px, -5px);
+    }
+    70% {
+        transform: translate(-5px, 5px);
+    }
+    80% {
+        transform: translate(5px, 5px);
+    }
+    90% {
+        transform: translate(-5px, -5px);
+    }
+}
+
+
+.link-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 15px;
+    border-radius: 5px;
+    overflow: hidden; /* Hide overflow for the animation */
+}
+
+.directory-link {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: popInOut 1.9s ease-in-out infinite alternate; /* Faster and larger animation */
+}
+
+@keyframes popInOut {
+    0% {
+        transform: scale(1); /* Original size */
+    }
+    100% {
+        transform: scale(1.2); /* 20% larger size */
+    }
+}
+
+.watch-now-butt {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(45deg, #ff5555, #ff0000); /* Gradient background with red hues */
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.2rem;
+    border: 2px solid #cc0000;
+    border-radius: 25px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.watch-now-butt:hover {
+    background: linear-gradient(45deg, #cc0000, #aa0000); /* Darker gradient on hover */
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
 /* Style for the container div */
 .social-icons-container {
   text-align: center; /* Center-align the icons */
