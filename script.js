@@ -2,6 +2,9 @@
 
 document.addEventListener('DOMContentLoaded', (event) => {
   const itemList = [
+    "Joe Dirt",
+    "Joe Dirt 2 - Beautiful Loser",
+    "Trevor Noah - I Wish You Would",
     "Expend4bles",
     "The Haunting at Saint Joseph s",
     "Moneyball",
