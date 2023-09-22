@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded', (event) => {
   const itemList = [
     "Joe Dirt",
+    "Creation of the Gods I - Kingdom of Storms",
     "Joe Dirt 2 - Beautiful Loser",
     "Trevor Noah - I Wish You Would",
     "Expend4bles",
