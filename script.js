@@ -2,6 +2,9 @@
 
 document.addEventListener('DOMContentLoaded', (event) => {
   const itemList = [
+    "Midway",
+    "Spy Kids - Armageddon",
+    "No One Will Save You",
     "Joe Dirt",
     "Creation of the Gods I - Kingdom of Storms",
     "Joe Dirt 2 - Beautiful Loser",
