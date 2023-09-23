@@ -1,4 +1,3 @@
-// Function to load content from another HTML page
 function loadPage(url, callback) {
    fetch(url)
       .then(response => response.text())
