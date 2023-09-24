@@ -26,7 +26,6 @@ li[data-tooltip]::after {
 /* Style for the image inside the tooltip */
 li[data-tooltip] img {
   max-width: 20%; /* Set the maximum width of the image */
-  display: none; /* Hide the image within the tooltip */
 }
 
 /* Additional style for the tooltip images */
