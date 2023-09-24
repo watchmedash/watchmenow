@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  let movieData; // Declare movieData here
+  let movieTitles; // Declare movieTitles here
 
   // Function to load movie data from "home.html"
   function loadMovieData() {
@@ -15,17 +15,15 @@ document.addEventListener('DOMContentLoaded', () => {
         tempElement.innerHTML = html;
 
         const movieFigures = tempElement.querySelectorAll('figure[data-genre][data-release-year]');
-        movieData = Array.from(movieFigures).map((figure) => {
-          const title = figure.querySelector("figcaption").textContent;
-          const imageSrc = figure.querySelector("img.defer-image").getAttribute("data-src");
-          return { title, imageSrc };
+        movieTitles = Array.from(movieFigures).map((figure) => {
+          return figure.querySelector("figcaption").textContent;
         });
 
         // Debugging: Log the loaded movie data
-        console.log("Movie Data Loaded:", movieData);
+        console.log("Movie Data Loaded:", movieTitles);
 
         // Perform initial search
-        performSearch(movieData);
+        performSearch(movieTitles);
       })
       .catch((error) => {
         console.error('Error loading movie data:', error);
@@ -33,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Function to perform movie search
-  function performSearch(movieData) {
+  function performSearch(movieTitles) {
     const searchInput = document.getElementById("searchInput");
     const searchResults = document.getElementById("searchResults");
     const searchTerm = searchInput.value.toLowerCase();
@@ -42,105 +40,43 @@ document.addEventListener('DOMContentLoaded', () => {
     if (searchTerm.trim() === "") {
       searchResults.style.display = "none";
     } else {
-      const filteredMovies = movieData.filter((movie) =>
-        movie.title.toLowerCase().includes(searchTerm)
+      const filteredTitles = movieTitles.filter((title) =>
+        title.toLowerCase().includes(searchTerm)
       );
-      if (filteredMovies.length === 0) {
+      if (filteredTitles.length === 0) {
         searchResults.innerHTML = "<p>No results found.</p>";
       } else {
-        displayItemList(filteredMovies, searchResults);
+        displayItemList(filteredTitles, searchResults);
       }
       searchResults.style.display = "block";
     }
   }
 
-  // Function to display filtered movie data
-  function displayItemList(items, container, maxItems = 12) {
+  // Function to display filtered movie titles
+  function displayItemList(items, container) {
     const ul = document.createElement("ul");
-    let visibleItemCount = maxItems;
-
-    function renderItems(startIndex, endIndex) {
-      for (let i = startIndex; i < endIndex; i++) {
-        const item = items[i];
-        if (!item) break;
-
-        const li = document.createElement("li");
-        const link = document.createElement("a");
-        link.textContent = item.title;
-        // Use the imageSrc property to construct the image URL
-        link.href = `../movies/${encodeURIComponent(item.title)}.html`;
-        li.dataset.tooltip = item.imageSrc; // Use the imageSrc property for the tooltip
-        li.appendChild(link);
-        ul.appendChild(li);
-      }
-    }
-
-    renderItems(0, visibleItemCount);
-
-    // Check if there are more items to show
-    if (items.length > visibleItemCount) {
-      const seeMoreLink = document.createElement("a");
-      seeMoreLink.textContent = "See More";
-      seeMoreLink.href = "#"; // You can set the actual link here
-      seeMoreLink.addEventListener("click", (event) => {
-        event.preventDefault();
-        visibleItemCount += maxItems; // Increase the visible item count
-        ul.innerHTML = ""; // Clear the current list
-        renderItems(0, visibleItemCount); // Display more items
-        if (visibleItemCount < items.length) {
-          ul.appendChild(seeMoreLink); // Add "See More" link if there are still more items
-        }
-        addTooltipListeners(); // Add tooltip listeners again after updating the list
-      });
-      ul.appendChild(seeMoreLink);
-    }
-
-    container.innerHTML = ""; // Clear the current container
-    container.appendChild(ul);
-    addTooltipListeners();
-  }
-
-
-  // Function to add tooltip listeners
-  function addTooltipListeners() {
-    const listItems = document.querySelectorAll("li[data-tooltip]");
-    listItems.forEach((li) => {
-      const link = li.querySelector("a");
-      const tooltipUrl = li.dataset.tooltip;
-      const tooltip = document.createElement("div");
-      tooltip.className = "tooltip";
-      tooltip.textContent = "Loading...";
-      li.addEventListener("mouseenter", () => {
-        tooltip.textContent = "Loading...";
-        tooltip.style.display = "block";
-        const tooltipImage = document.createElement("img");
-        tooltipImage.src = tooltipUrl;
-        tooltipImage.onload = () => {
-          tooltip.textContent = "";
-          tooltip.appendChild(tooltipImage);
-
-          // Set the maximum width and height of the image here
-          tooltipImage.style.maxWidth = "20%";
-          tooltipImage.style.maxHeight = "20%";
-        };
-      });
-      li.addEventListener("mouseleave", () => {
-        tooltip.style.display = "none";
-      });
-      li.appendChild(tooltip);
+    items.forEach((item) => {
+      const li = document.createElement("li");
+      const link = document.createElement("a");
+      const trimmedItem = item.trim(); // Trim leading and trailing whitespaces
+      link.textContent = trimmedItem;
+      // Add the appropriate link for the movie here
+      link.href = `../movies/${encodeURIComponent(trimmedItem)}.html`;
+      li.dataset.tooltip = `../images/${encodeURIComponent(trimmedItem)}.webp`; // Add a data-tooltip attribute to the li
+      li.appendChild(link);
+      ul.appendChild(li);
     });
+    container.appendChild(ul);
   }
-
 
   // Load movie data when the page loads
   loadMovieData();
 
   const searchInput = document.getElementById("searchInput");
-  searchInput.addEventListener("input", () => performSearch(movieData));
+  searchInput.addEventListener("input", () => performSearch(movieTitles));
   const searchResults = document.getElementById("searchResults");
   searchResults.style.display = "none";
 });
-
 
 
 // Function to set a cookie
