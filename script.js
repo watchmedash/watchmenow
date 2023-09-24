@@ -2,6 +2,9 @@
 
 document.addEventListener('DOMContentLoaded', (event) => {
   const itemList = [
+    "The Retirement Plan",
+    "American Pie Presents - Girls Rules",
+    "Dirty Grandpa",
     "Midway",
     "Spy Kids - Armageddon",
     "No One Will Save You",
