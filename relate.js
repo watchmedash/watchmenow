@@ -1,10 +1,12 @@
+// Modified redirectTo function to open "redirect.html" in the same tab
 function redirectTo(destinationUrl) {
-    // Create the redirect URL with the query parameter
-    var redirectUrl = 'redirect.html?url=' + encodeURIComponent(destinationUrl);
+    // Construct the absolute path to "redirect.html"
+    var redirectUrl = window.location.origin + '/redirect.html?url=' + encodeURIComponent(destinationUrl);
 
-    // Open "redirect.html" in a new window or tab
-    window.open(redirectUrl, '_blank');
+    // Open "redirect.html" in the same tab
+    window.open(redirectUrl, '_self');
 }
+
 // Function to load and display related movies
 function loadRelatedMovies() {
   // Get a reference to the related movies gallery container on the current page
