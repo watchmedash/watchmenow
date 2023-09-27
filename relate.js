@@ -1,9 +1,9 @@
-// Modified redirectTo function to open "redirect.html" in the same tab
+// Modified redirectTo function to open "redirect.html" directly
 function redirectTo(destinationUrl) {
     // Construct the absolute path to "redirect.html"
     var redirectUrl = window.location.origin + '/redirect.html?url=' + encodeURIComponent(destinationUrl);
 
-    // Open "redirect.html" in the same tab
+    // Open "redirect.html" in a new window or tab
     window.open(redirectUrl, '_self');
 }
 
