@@ -1,37 +1,41 @@
-function loadPage(url, callback) {
-   fetch(url)
-      .then(response => response.text())
-      .then(data => {
-         callback(data);
+function redirectTo(destinationUrl) {
+    // Create the redirect URL with the query parameter
+    var redirectUrl = 'redirect.html?url=' + encodeURIComponent(destinationUrl);
+
+    // Open "redirect.html" in a new window or tab
+    window.open(redirectUrl, '_blank');
+}
+// Function to load and display related movies
+function loadRelatedMovies() {
+  // Get a reference to the related movies gallery container on the current page
+  const relatedMoviesGallery = document.querySelector('.related-movies-gallery');
+
+  // If the container exists on the current page
+  if (relatedMoviesGallery) {
+    // Fetch the content of home.html (adjust the URL as needed)
+    fetch('../home.html')
+      .then((response) => response.text())
+      .then((data) => {
+        const tempElement = document.createElement('div');
+        tempElement.innerHTML = data;
+
+        // Find all movie figures in the parsed HTML content
+        const movieFigures = tempElement.querySelectorAll('.gallery figure');
+
+        // Shuffle the related movies array
+        const relatedMovies = Array.from(movieFigures).sort(() => Math.random() - 0.5);
+
+        // Display the first 5 related movies in the gallery
+        relatedMovies.slice(0, 5).forEach((figure) => {
+          const clonedFigure = figure.cloneNode(true);
+          relatedMoviesGallery.appendChild(clonedFigure);
+        });
       })
-      .catch(error => {
-         console.error('Error loading page:', error);
+      .catch((error) => {
+        console.error('Error loading related movies:', error);
       });
+  }
 }
 
-// Get the current movie's genre from the other HTML page
-loadPage('../home.html', function(data) {
-   const tempElement = document.createElement('div');
-   tempElement.innerHTML = data;
-
-   // Update the href attributes of movie links
-   const movieLinks = tempElement.querySelectorAll('.movie-link');
-   movieLinks.forEach(link => {
-      const originalHref = link.getAttribute('href');
-      const updatedHref = originalHref.replace('movies/', '');
-      link.setAttribute('href', updatedHref);
-   });
-
-   // Find all movie figures
-   const movieFigures = tempElement.querySelectorAll('.gallery figure');
-
-   // Randomly shuffle the related movies array
-   const relatedMovies = Array.from(movieFigures).sort(() => Math.random() - 0.5);
-
-   // Display the first 5 related movies in the gallery
-   const relatedMoviesGallery = document.querySelector('.related-movies-gallery');
-   relatedMovies.slice(0, 5).forEach(figure => {
-      const clonedFigure = figure.cloneNode(true);
-      relatedMoviesGallery.appendChild(clonedFigure);
-   });
-});
+// Call the function to load and display related movies when the page loads
+window.onload = loadRelatedMovies;
