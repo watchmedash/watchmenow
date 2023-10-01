@@ -26,7 +26,7 @@
           const urlParams = new URLSearchParams(window.location.search);
           const url = urlParams.get('url');
           const countdownElement = document.getElementById('countdown');
-          let countdown = 30; // Countdown from 15 to 1
+          let countdown = 15; // Countdown from 15 to 1
 
           const countdownInterval = setInterval(function() {
               if (countdown === 1) {
@@ -119,7 +119,7 @@
       <div class="content">
          <div class="watchmenow-info">
     <p>Please wait while your download link is being generated.</p>
-    <p id="countdown">Download will start in 30 seconds...</p>
+    <p id="countdown">Download will start in 15 seconds...</p>
            <div class="button-container">
                        <a href="downloads.html" class="watch-now-butt">Go back</a>
                    </div>
