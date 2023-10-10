@@ -732,6 +732,19 @@ footer .copyright {
   font-family: 'Exo 2', sans-serif; /* Apply the "Exo 2" font to the copyright text */
 }
 
+/* Add the hover effect to the figure element */
+.gallery figure:hover::before {
+  content: "";
+  background-image: url('../images/hover-image.webp'); /* Specify the path to your hover image */
+  opacity: 1;
+  width: 100%; /* Set the width to 100% of the figure element */
+  height: 100%; /* Set the height to 100% of the figure element */
+  position: absolute; /* Position it absolutely within the figure */
+  top: 0;
+  left: 0;
+  z-index: 999; /* Place it above the image */
+  background-size: 100% 100%; /* Ensure the hover image covers the entire figure */
+}
 
 .gallery {
     display: flex;
@@ -766,7 +779,7 @@ footer .copyright {
     width: 100%;
     height: auto;
     border-radius: 10px;
-     /* Make image corners rounded */
+    position: relative;
 }
 
 /* Adjust to 4 items per row for screens smaller than 600px */
@@ -789,7 +802,6 @@ footer .copyright {
     color: #fff; /* Change the font color to white */
     width: 100%; /* Make the caption width same as image width */
     word-wrap: break-word;
-     /* Wrap the long titles to next line */
 }
 
 .title {
