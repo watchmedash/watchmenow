@@ -732,6 +732,7 @@ footer .copyright {
   font-family: 'Exo 2', sans-serif; /* Apply the "Exo 2" font to the copyright text */
 }
 
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -765,7 +766,7 @@ footer .copyright {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    position: relative;
+     /* Make image corners rounded */
 }
 
 /* Adjust to 4 items per row for screens smaller than 600px */
@@ -788,6 +789,7 @@ footer .copyright {
     color: #fff; /* Change the font color to white */
     width: 100%; /* Make the caption width same as image width */
     word-wrap: break-word;
+     /* Wrap the long titles to next line */
 }
 
 .title {
