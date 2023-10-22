@@ -483,7 +483,7 @@ body::after {
   left: 0;
   width: 100%;
   height: calc(100% - 80px); /* Adjust the height to cover the remaining space between footer and page body */
-  background-image: url("https://ofaishou.sirv.com/Images/bg.webp");
+  background-image: url("https://mcdn.wallpapersafari.com/medium/80/95/MzyUKw.jpg");
   background-repeat: repeat-y;
   background-size: cover; /* Set background-size to "cover" to make the image cover the entire container */
   opacity: 0.3;
