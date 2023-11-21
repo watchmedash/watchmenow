@@ -545,12 +545,9 @@ nav {
 
 /* New CSS for the image container */
 .image-contained {
+width: 90%;
   text-align: center;
   margin-top: 20px; /* Add some space below the nav bar */
-}
-
-.image-contained img {
-  width: 80%;
 }
 
 .content {
