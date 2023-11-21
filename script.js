@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const tempElement = document.createElement('div');
         tempElement.innerHTML = html;
 
-        const movieFigures = tempElement.querySelectorAll('figure[data-requested="true"]');
+        // Include figures with and without the data-requested attribute
+        const movieFigures = tempElement.querySelectorAll('figure');
         movieData = Array.from(movieFigures).map((figure) => {
           const title = figure.querySelector("figcaption").textContent;
           const imageSrc = figure.querySelector("img.defer-image").getAttribute("data-src");
