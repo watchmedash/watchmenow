@@ -551,9 +551,6 @@ nav {
 
 .image-contained img {
   width: 80%;
-  max-width: 100%; /* Limit the width of the image to its original size */
-  opacity: 2;
-   /* Adjust the opacity of the image */
 }
 
 .content {
