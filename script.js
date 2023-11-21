@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const tempElement = document.createElement('div');
         tempElement.innerHTML = html;
 
-        const movieFigures = tempElement.querySelectorAll('figure[data-genre][data-release-year]');
+        const movieFigures = tempElement.querySelectorAll('figure[data-requested="true"]');
         movieData = Array.from(movieFigures).map((figure) => {
           const title = figure.querySelector("figcaption").textContent;
           const imageSrc = figure.querySelector("img.defer-image").getAttribute("data-src");
@@ -114,6 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const destinationUrl = `redirect.html?url=../movies/${encodeURIComponent(movieTitle)}.html`;
     window.location.href = destinationUrl;
   }
+
   // Load movie data when the page loads
   loadMovieData();
 
