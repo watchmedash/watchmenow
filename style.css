@@ -543,6 +543,19 @@ nav {
    /* Adjust the opacity of the image */
 }
 
+/* New CSS for the image container */
+.image-contained {
+  text-align: center;
+  margin-top: 20px; /* Add some space below the nav bar */
+}
+
+.image-contained img {
+  width: 80%;
+  max-width: 100%; /* Limit the width of the image to its original size */
+  opacity: 2;
+   /* Adjust the opacity of the image */
+}
+
 .content {
   width: 85%;
   margin: 0 auto; /* Center the content horizontally and remove all margins */
