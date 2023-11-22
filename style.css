@@ -69,6 +69,15 @@
     margin: 0 auto;
 }
 
+.custom-video-contained {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    width: 95%;
+    margin: 0 auto;
+}
+
 .custom-iframe {
     position: absolute;
     top: 0;
@@ -543,12 +552,16 @@ nav {
    /* Adjust the opacity of the image */
 }
 
-/* New CSS for the image container */
 .image-contained {
-width: 90%;
-  text-align: center;
-  margin-top: 20px; /* Add some space below the nav bar */
-}
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .image-contained img {
+      width: 100%;
+      height: auto;
+      display: block; /* This ensures the image behaves as a block element */
+    }
 
 .content {
   width: 85%;
