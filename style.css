@@ -69,15 +69,6 @@
     margin: 0 auto;
 }
 
-.custom-video-contained {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    width: 95%;
-    margin: 0 auto;
-}
-
 .custom-iframe {
     position: absolute;
     top: 0;
