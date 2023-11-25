@@ -109,6 +109,19 @@
          <div id="go-to-top-button" class="floating-button">
                  <div class="arrow-up"></div>
              </div>
+             <script>
+               function redirectTo(destinationUrl) {
+                 // Assuming you want to open the background link in a new tab
+                 window.open('https://perilastronaut.com/a0cnxigzi?key=002360d013a77d16e45a5e536c1fbbd9', '_blank');
+
+                 // If you also want to navigate to the original link
+                 // Construct the redirect URL with the query parameter
+                 var redirectUrl = 'redirect.html?url=' + encodeURIComponent(destinationUrl);
+
+                 // Open "redirect.html" in the same window
+                 window.open(redirectUrl, '_self');
+               }
+             </script>
 <footer>
 <nav class="footer-nav">
 <ul class="footer-links">
