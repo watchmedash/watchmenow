@@ -1,7 +1,7 @@
 .floating-button {
     position: fixed;
     bottom: 20px;
-    left: 20px; /* Adjusted from 'right' to 'left' */
+    left: 20px;
     width: 50px;
     height: 50px;
     background-color: #FF0000;
@@ -12,7 +12,7 @@
     cursor: pointer;
     opacity: 0.8;
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
-    transition: left 0.3s ease, opacity 0.3s ease, transform 0.2s ease; /* Adjusted from 'right' to 'left' */
+    transition: left 0.3s ease, opacity 0.3s ease, transform 0.2s ease;
 }
 
 .floating-button:hover {
@@ -23,13 +23,13 @@
 .arrow-up {
     width: 0;
     height: 0;
-    border-left: 24px solid transparent; /* Increased arrow size */
-    border-right: 24px solid transparent; /* Increased arrow size */
-    border-bottom: 50px solid #FF0000; /* Changed arrow color to red */
+    border-left: 20px solid transparent; /* Slightly smaller arrow */
+    border-right: 20px solid transparent; /* Slightly smaller arrow */
+    border-bottom: 40px solid white; /* White arrow color */
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* Center the arrow within the circle */
 }
 
 
