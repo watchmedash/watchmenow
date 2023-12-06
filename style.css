@@ -354,6 +354,11 @@ li[data-tooltip]:hover::after {
   transform: scale(1.05);
 }
 
+.ad-banner-container {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px; /* Adjust as needed for spacing */
+}
 
 .terra {
             display: flex;
