@@ -23,13 +23,13 @@
 .arrow-up {
     width: 0;
     height: 0;
-    border-left: 20px solid transparent; /* Slightly smaller arrow */
-    border-right: 20px solid transparent; /* Slightly smaller arrow */
-    border-bottom: 40px solid white; /* White arrow color */
+    border-left: 10px solid transparent; /* Adjusted arrow size */
+    border-right: 10px solid transparent; /* Adjusted arrow size */
+    border-bottom: 20px solid white; /* White arrow color */
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Center the arrow within the circle */
+    transform: translate(-50%, -50%);
 }
 
 
