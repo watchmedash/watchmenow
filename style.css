@@ -1,7 +1,7 @@
 .floating-button {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    left: 20px; /* Adjusted from 'right' to 'left' */
     width: 50px;
     height: 50px;
     background-color: #FF0000;
@@ -10,9 +10,9 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    opacity: 0.8; /* Adjust opacity to 80% */
-    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5); /* Increased box-shadow for more bevel and emboss */
-    transition: bottom 0.3s ease, opacity 0.3s ease, transform 0.2s ease;
+    opacity: 0.8;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease, opacity 0.3s ease, transform 0.2s ease; /* Adjusted from 'right' to 'left' */
 }
 
 .floating-button:hover {
