@@ -1,7 +1,7 @@
 .floating-button {
     position: fixed;
     bottom: 20px;
-    left: 20px;
+    left: 20px; /* Changed from 'right' to 'left' */
     width: 50px;
     height: 50px;
     background-color: #FF0000;
@@ -23,15 +23,14 @@
 .arrow-up {
     width: 0;
     height: 0;
-    border-left: 10px solid transparent; /* Adjusted arrow size */
-    border-right: 10px solid transparent; /* Adjusted arrow size */
-    border-bottom: 20px solid white; /* White arrow color */
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 25px solid white;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 
 
 .watch-now-bur {
