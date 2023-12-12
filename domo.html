@@ -8,7 +8,7 @@
 <body>
 
 <script>
-// Example: Assume these values are dynamically generated
+
 var userID = "123456";
 var transactionID = "987654";
 var revenue = "25.00";
@@ -17,7 +17,7 @@ var hash = "abcdef1234567890";
 var ip = "123.456.789.012";
 var type = "credit";
 
-// Construct the postback URL
+
 var postbackURL = "https://watchmenow.live/domo" +
     "?userID=" + userID +
     "&transactionID=" + transactionID +
@@ -27,7 +27,7 @@ var postbackURL = "https://watchmenow.live/domo" +
     "&ip=" + ip +
     "&type=" + type;
 
-// Redirect the user to the postback URL
+
 window.location.href = postbackURL;
 </script>
 
