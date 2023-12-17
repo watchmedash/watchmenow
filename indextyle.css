@@ -104,6 +104,25 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
+.watch-now-budd {
+    margin-top: 10px;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.2rem;
+    border: 2px solid #cc0000;
+    border-radius: 25px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.watch-now-budd:hover {
+    background: linear-gradient(45deg, #cc0000, #aa0000); /* Darker gradient on hover */
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
 /* Style for the container div */
 .social-icons-container {
   text-align: center; /* Center-align the icons */
