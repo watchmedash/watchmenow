@@ -117,14 +117,41 @@ Support us with a Bitcoin donation!
              </button>
          </p>
 
-         <script>
-                 function copyToClipboard(elementId) {
-                     var text = document.getElementById(elementId).innerText;
-                     navigator.clipboard.writeText(text)
-                         .then(() => alert("Copied to clipboard:\n" + text))
-                         .catch((err) => console.error('Unable to copy to clipboard', err));
+         <style>
+                 #notification {
+                     display: none;
+                     position: fixed;
+                     top: 0;
+                     left: 50%;
+                     transform: translateX(-50%);
+                     background-color: #4caf50;
+                     color: #fff;
+                     padding: 10px;
+                     border-radius: 5px;
+                     text-align: center;
+                     z-index: 1000;
                  }
-             </script>
+             </style>
+
+         <script>
+        function showNotification(message) {
+            var notification = document.getElementById("notification");
+            notification.textContent = message;
+            notification.style.display = "block";
+            setTimeout(function () {
+                notification.style.display = "none";
+            }, 3000); // Adjust the duration as needed
+        }
+
+        function copyToClipboard(elementId) {
+            var text = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(text)
+                .then(() => showNotification("Copied to clipboard:\n" + text))
+                .catch((err) => console.error('Unable to copy to clipboard', err));
+        }
+    </script>
+
+    <div id="notification"></div>
 
      </div>
 <div class="tok"><div><div><h3 class>For quick updates follow us:</h3><div class="separator" style="clear: both;"><div class="social-icons-container">
