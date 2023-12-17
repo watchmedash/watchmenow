@@ -608,7 +608,7 @@ body::after {
 }
 
 .logo-container {
-    margin-right: 15px;
+    margin-right: 10px;
     display: flex; /* Add display flex to allow flex items to be aligned */
     align-items: center; /* Vertically center the logo inside the container */
     height: 80px; /* Set the fixed height of the logo container */
