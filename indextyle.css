@@ -57,36 +57,6 @@
     }
 }
 
-
-.link-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 15px;
-    border-radius: 5px;
-    overflow: hidden; /* Hide overflow for the animation */
-}
-
-.directory-link {
-    color: #fff;
-    text-decoration: none;
-    font-family: 'Exo 2', sans-serif;
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: popInOut 1.9s ease-in-out infinite alternate; /* Faster and larger animation */
-}
-
-@keyframes popInOut {
-    0% {
-        transform: scale(1); /* Original size */
-    }
-    100% {
-        transform: scale(1.2); /* 20% larger size */
-    }
-}
-
 .watch-now-butt {
     margin-top: 10px;
     display: inline-block;
