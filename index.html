@@ -118,17 +118,13 @@ Support us with a Bitcoin donation!
          </p>
 
          <script>
-        function copyToClipboard(elementId) {
-            var text = document.getElementById(elementId).innerText;
-            var textArea = document.createElement("textarea");
-            textArea.value = text;
-            document.body.appendChild(textArea);
-            textArea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textArea);
-            alert("Copied to clipboard: " + text);
-        }
-    </script>
+                 function copyToClipboard(elementId) {
+                     var text = document.getElementById(elementId).innerText;
+                     navigator.clipboard.writeText(text)
+                         .then(() => alert("Copied to clipboard:\n" + text))
+                         .catch((err) => console.error('Unable to copy to clipboard', err));
+                 }
+             </script>
 
      </div>
 <div class="tok"><div><div><h3 class>For quick updates follow us:</h3><div class="separator" style="clear: both;"><div class="social-icons-container">
