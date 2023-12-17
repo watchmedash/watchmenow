@@ -609,7 +609,6 @@ body::after {
 
 .logo-container {
     margin-right: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Add a subtle bevel effect */
     display: flex; /* Add display flex to allow flex items to be aligned */
     align-items: center; /* Vertically center the logo inside the container */
     height: 80px; /* Set the fixed height of the logo container */
