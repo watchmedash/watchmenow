@@ -50,11 +50,12 @@
 <p>Title: <a href="movies/Foursome.html">Foursome</a></p>
 </div>
 <div class="search-container">
-<form>
-<input autocomplete="off" id="searchInput" placeholder="Search..." type="text"/>
-<button type="button"><i class="fas fa-search"></i></button>
-</form>
+  <form>
+    <input type="text" id="searchInput" placeholder="Search..." autocomplete="off">
+    <button type="submit"><i class="fas fa-search"></i></button>
+  </form>
 </div>
+
 <div id="searchResults"></div>
 <div class="terra">
 <script type="text/javascript">
@@ -5026,7 +5027,6 @@ window.addEventListener('resize', loadImages);
 loadImages();
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="script.js" async></script>
 <script>
   function loadStylesheets() {
     function loadStylesheet(href) {
@@ -5070,5 +5070,6 @@ loadImages();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
+    <script src="script.js"></script>
 </body>
 </html>
