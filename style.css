@@ -411,7 +411,7 @@ li[data-tooltip]:hover::after {
     transform: translateX(-50%);
     width: 50%;
   display: none;
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   padding: 10px;
   background-color: rgba(255, 255, 255, 1);
