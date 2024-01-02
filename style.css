@@ -735,7 +735,7 @@ footer {
   background-color: radial-gradient(circle, #FF3333, #770000);
   padding: 10px 0;
   width: 100%;
-  bottom: 0;
+  bottom: 0; /* Position the footer at the bottom */
   left: 0;
 }
 
@@ -750,7 +750,7 @@ footer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 100%;
+  width: 100%; // Add this
 }
 
 .footer-links li {
@@ -763,8 +763,9 @@ footer {
   text-decoration: none;
   font-size: 1.5vw;
   display: block;
-  min-font-size: 16px;
-  font-size: max(min-font-size, 1.5vw);
+  /* Add the following styles to set a minimum font size */
+  min-font-size: 16px; /* Adjust the minimum font size as needed */
+  font-size: max(min-font-size, 1.5vw); /* Set the font size as the larger value between 1.5vw and the minimum font size */
 }
 
 .footer-links a::before {
@@ -795,10 +796,12 @@ footer {
   color: black;
 }
 
+/* Add margins to create space between the links and icons */
 .footer-nav {
   margin-top: 10px;
 }
 
+/* Add the following CSS to set the footer nav to 100% width */
 @media screen and (max-width: 768px) {
   .footer-nav {
     flex-direction: column;
@@ -806,17 +809,19 @@ footer {
   }
 
   .footer-links a {
-    font-size: 16px;
+    font-size: 16px; /* Adjust the font size for smaller screens */
   }
 }
 
+/* Additional CSS for the copyright line */
 footer .copyright {
   text-align: center;
   font-size: 14px;
   color: #fff;
   margin-top: 20px;
-  font-family: 'Exo 2', sans-serif;
+  font-family: 'Exo 2', sans-serif; /* Apply the "Exo 2" font to the copyright text */
 }
+
 
 .gallery {
     display: flex;
@@ -825,17 +830,16 @@ footer .copyright {
 }
 
 .gallery figure {
-    flex: 1 0 calc(12.5% - 2%);
+    flex: 1 0 calc(12.5% - 2%); /* 8 items per row */
     max-width: calc(12.5% - 2%);
     margin: 1%;
-    padding: 0;
+    padding: 0; /* Reduce padding to 5px */
     box-sizing: border-box;
-    background: none;
+    background: none; /* Add a red to dark red gradient background */
     border-radius: 10px;
     box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.0);
-    position: relative;
+    position: relative; /* Make corners rounded */
 }
-
 .gallery figure::before {
     content: "";
     display: block;
@@ -844,46 +848,48 @@ footer .copyright {
     bottom: 0;
     left: 0;
     right: 0;
-    background: none;
-    border-radius: 10px;
-    z-index: -1;
+    background: none; /* Semi-transparent light red to red gradient */
+    border-radius: 10px; /* Make corners rounded */
+    z-index: -1; /* Place the pseudo-element behind the content */
 }
-
 .gallery figure img {
     width: 100%;
     height: auto;
     border-radius: 10px;
+     /* Make image corners rounded */
 }
 
 .gallery figure:hover img {
-    transform: scale(1.1);
-}
+            transform: scale(1.1); /* Add hover effect */
+        }
 
-.custom-tooltip {
-    display: none;
-    position: absolute;
-    background-color: rgba(128, 128, 128, 0.8);
-    padding: 10px;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 100;
-    pointer-events: none;
-    border-radius: 10px;
-    max-width: 240px;
-    text-align: center;
-}
+        .custom-tooltip {
+            display: none;
+            position: absolute;
+            background-color: rgba(128, 128, 128, 0.8); /* Transparent grey color */
+            padding: 10px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+            pointer-events: none;
+            border-radius: 10px;
+            max-width: 240px; /* Set a maximum width */
+            text-align: center; /* Center text */
+        }
 
-.custom-tooltip h2,
-.custom-tooltip p {
-    font-size: 14px;
-    margin: 5px 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-}
+        /* Resize text inside the tooltip */
+        .custom-tooltip h2,
+        .custom-tooltip p {
+            font-size: 14px;
+            margin: 5px 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* Limit the number of lines to 1 */
+            -webkit-box-orient: vertical;
+        }
 
+/* Adjust to 4 items per row for screens smaller than 600px */
 @media screen and (max-width: 600px) {
     .gallery figure {
         flex: 1 0 calc(25% - 2%);
@@ -891,6 +897,7 @@ footer .copyright {
     }
 }
 
+/* Styles for the image and the caption */
 .gallery img {
     width: 100%;
     height: auto;
@@ -898,10 +905,11 @@ footer .copyright {
 
 .gallery figcaption {
     text-align: center;
-    font-family: 'Exo 2', sans-serif;
-    color: #fff;
-    width: 100%;
+    font-family: 'Exo 2', sans-serif; /* Set font family to Exo 2 */
+    color: #fff; /* Change the font color to white */
+    width: 100%; /* Make the caption width same as image width */
     word-wrap: break-word;
+     /* Wrap the long titles to next line */
 }
 
 .title {
@@ -910,6 +918,7 @@ footer .copyright {
   font-family: 'Exo 2', sans-serif;
   font-size: 18px;
 }
+
 
 .pagination {
     text-align: center;
@@ -937,11 +946,10 @@ footer .copyright {
     justify-content: center;
     align-items: center;
 }
-
 .filter-button {
-    margin: 0 5px;
+    margin: 0 5px; /* Adjust the value as per your design preference */
 }
 
 .filter-button.genre-button {
-    margin: 5px;
+    margin: 5px;  /* Adding margins to all sides for spacing */
 }
