@@ -365,22 +365,22 @@ li[data-tooltip]:hover::after {
 .search-container {
   margin-top: 20px;
   text-align: center;
-  max-width: 80%; /* Set the maximum width to 70% of the screen */
-  margin: 0 auto; /* Center the search container horizontally */
-  margin-bottom: 0; /* Remove the margin at the bottom */
+  max-width: 90%;
+  margin: 0 auto;
+  margin-bottom: 0;
 }
 
 .search-container form {
-  padding: 8px; /* Add desired padding */
+  padding: 8px;
   position: relative;
   display: flex;
-  width: 80%;
+  width: 90%;
   margin: 10px auto;
 }
 
 .search-container input {
   flex: 1;
-  padding: 8px 10px; /* Adjust padding as needed */
+  padding: 8px 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 18px;
@@ -397,7 +397,7 @@ li[data-tooltip]:hover::after {
   right: 5px;
 }
 
-/* Style the search icon using Font Awesome */
+
 .search-container button i {
   font-size: 20px;
   color: red;
@@ -412,11 +412,11 @@ li[data-tooltip]:hover::after {
     width: 50%;
   display: none;
   width: 62%;
-  margin: 0 auto; /* Center the search results horizontally */
+  margin: 0 auto;
   padding: 10px;
-  background-color: rgba(255, 255, 255, 1); /* Add some transparency to the background */
+  background-color: rgba(255, 255, 255, 1);
   border-radius: 5px;
-  color: red; /* Set the font color to red */
+  color: red;
   font-family: 'Exo 2', sans-serif;
   font-weight: bold;
 }
