@@ -158,6 +158,43 @@ li[data-tooltip]:hover::after {
     text-decoration: underline;
 }
 
+.hot {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0); /* Yellow background with transparency */
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+  }
+
+  .hot p {
+      margin: 0;
+  }
+
+  .hot a {
+      color: #FFFFFF; /* Red link font color */
+      text-decoration: none;
+  }
+
+  .hot img {
+      height: auto;
+      width: 100%; /* Make images take 100% of the container width */
+      max-width: 240px; /* Limit maximum width of each image */
+      max-height: 320px; /* Limit maximum height of each image */
+      animation: glowAnimation 2s infinite alternate; /* Apply a continuous glow animation */
+}
+
+@keyframes glowAnimation {
+    from {
+        box-shadow: 0 0 20px rgba(255, 255, 0, 0.7); /* Initial shadow with yellow glow */
+    }
+    to {
+        box-shadow: 0 0 40px rgba(255, 255, 0, 1); /* Larger shadow for a stronger glow */
+    }
+}
+
 
 /* Style the related movies gallery container */
 .related-movies-gallery {
