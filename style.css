@@ -259,7 +259,7 @@ li[data-tooltip]:hover::after {
 }
 
 .ts {
-    background-color: rgba(255, 0, 0, 0.4); /* Red color with 0.4 opacity */
+    background-color: rgba(0, 0, 0, 0.4); /* Red color with 0.4 opacity */
 }
 /* Style for the "SD" tag */
 .cam {
