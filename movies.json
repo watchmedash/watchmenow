@@ -1,0 +1,21 @@
+// movies.json
+{
+  "movies": [
+    {
+      "title": "Aquaman and the Lost Kingdom",
+      "url": "https://watchmenow.live/movies/Aquaman and the Lost Kingdom",
+      "image": "https://i.postimg.cc/PqfJqsh5/000000433.webp"
+    },
+    {
+      "title": "Wish",
+      "url": "https://watchmenow.live/movies/Wish",
+      "image": "https://i.postimg.cc/ZYcGhSDr/000000449.webp"
+    },
+    {
+      "title": "Godzilla Minus One",
+      "url": "https://watchmenow.live/movies/Godzilla Minus One",
+      "image": "https://i.postimg.cc/k4r5tkfs/000000428.webp"
+    }
+    // Add more movies as needed
+  ]
+}
