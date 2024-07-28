@@ -1,31 +1,22 @@
 import os
-import re
 
-# Define a regular expression pattern to match and remove the specified script code
-script_pattern_to_remove = re.compile(r'<script>\s*window\.yaContextCb\.push\(\(\)\s*=>\s*{\s*Ya\.Context\.AdvManager\.render\({\s*"blockId":\s*"R-A-2752621-1",\s*"renderTo":\s*"yandex_rtb_R-A-2752621-1"\s*}\)\s*}\)\s*</script>', re.DOTALL)
+# Directory containing your HTML files
+directory = r'C:\Users\HP\Documents\GitHub\dashflix\movies'  # Replace with your actual directory path
 
-# Define a regular expression pattern to match and remove the specified comment and <div> element
-comment_and_div_pattern_to_remove = re.compile(r'<!-- Yandex\.RTB R-A-2752621-1 -->\s*<div id="yandex_rtb_R-A-2752621-1">\s*</div>', re.DOTALL)
+# Line to be removed
+line_to_remove = '<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>\n'
 
-# Get the current directory (where the script is located)
-current_directory = os.path.dirname(os.path.abspath(__file__))
+def remove_font_links(directory):
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            if file.endswith('.html'):
+                filepath = os.path.join(root, file)
+                with open(filepath, 'r') as f:
+                    lines = f.readlines()
+                with open(filepath, 'w') as f:
+                    for line in lines:
+                        if line != line_to_remove:
+                            f.write(line)
 
-# Get a list of HTML files in the current directory
-html_files = [file for file in os.listdir(current_directory) if file.endswith(".html")]
-
-# Loop through each HTML file
-for filename in html_files:
-    with open(os.path.join(current_directory, filename), "r", encoding="utf-8") as file:
-        html_content = file.read()
-
-    # Use regular expressions to remove the specified script code
-    modified_html_content = script_pattern_to_remove.sub("", html_content)
-
-    # Use regular expressions to remove the specified comment and <div> element
-    modified_html_content = comment_and_div_pattern_to_remove.sub("", modified_html_content)
-
-    # Save the modified HTML back to the file
-    with open(os.path.join(current_directory, filename), "w", encoding="utf-8") as file:
-        file.write(modified_html_content)
-
-print("Specified script, comment, and <div> element removed from HTML files successfully.")
+# Call the function to remove font links recursively
+remove_font_links(directory)
