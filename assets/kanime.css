@@ -300,6 +300,9 @@
   right: 1em;
 }
 @media only screen and (max-width: 480px) {
+  .items-grid .item {
+    width: 50%; /* Change to 50% for 2 columns */
+  }
   .Toastify__toast-container {
     width: 100vw;
     padding: 0;
