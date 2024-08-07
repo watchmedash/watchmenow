@@ -22197,14 +22197,14 @@ Thus begins Tanjirou's quest to fight demons and turn his sister human again.`,
                 fetchCategory: "top-airing",
                 type: "Trending",
                 title: "Trending Now",
-                description: "Explore and immerse yourself in the captivating world of the most current and trending anime series available!",
+                description: "Dive into the captivating world of the latest and most popular anime series available!",
                 spacing: "lg:top-[-12rem]",
                 hasSeeAll: !0
             }), x.jsx(ar, {
                 fetchCategory: "recent-episodes",
                 type: "Latest",
                 title: "Latest Release",
-                description: "Keep yourself informed and in the loop with the most recent releases!",
+                description: "Stay ahead of the curve with the newest and most exciting releases!",
                 spacing: "lg:top-[-8rem]",
                 hasSeeAll: !0
             }), x.jsx(Vr, {})]
@@ -22217,7 +22217,7 @@ Thus begins Tanjirou's quest to fight demons and turn his sister human again.`,
             fetchCategory: "top-airing",
             type: "Trending",
             title: "Trending Now",
-            description: "Explore and immerse yourself in the captivating world of the most current and trending anime series available!",
+            description: "Dive into the captivating world of the latest and most popular anime series available!",
             spacing: "lg:pt-10 lg:pb-20"
         }), x.jsx(Vr, {})]
     }),
@@ -22228,7 +22228,7 @@ Thus begins Tanjirou's quest to fight demons and turn his sister human again.`,
             fetchCategory: "recent-episodes",
             type: "Latest",
             title: "Latest Release",
-            description: "Keep yourself informed and in the loop with the most recent releases!",
+            description: "Stay ahead of the curve with the newest and most exciting releases!",
             spacing: "lg:pt-10 lg:pb-20"
         }), x.jsx(Vr, {})]
     }),
@@ -24236,7 +24236,7 @@ const aj = ({
                 fetchCategory: "recent-episodes",
                 type: "Latest",
                 title: "Latest Release",
-                description: "Keep yourself informed and in the loop with the most recent releases!",
+                description: "Stay ahead of the curve with the newest and most exciting releases!",
                 spacing: "lg:pt-10 lg:pb-20",
                 hasSeeAll: !0
             }), x.jsx(Vr, {})]
