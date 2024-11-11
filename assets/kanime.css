@@ -1809,6 +1809,7 @@ body {
   font-family: Poppins, sans-serif;
   margin: 0 auto;
   max-width: 3500px;
+  overflow-x : hidden;
 }
 html {
   scroll-behavior: smooth;
