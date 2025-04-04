@@ -1,44 +1,192 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anime-X - Watch Anime Online in HD for FREE</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta property="og:title" content="Dashflix - Watch Free Movies and TV Series Online"/>
+<meta property="og:description" content="Explore a world of free movies and TV series online at Dashflix. Enjoy a variety of genres, from classics to the latest releases, all available for streaming."/>
+<meta property="og:url" content="https://anime-x.top"/>
+<meta property="og:image" content="https://i.postimg.cc/YCWDLrdF/th.webp"/>
+<meta name="description" content="Watch free movies and TV series online with multiple genres at Dashflix. Discover classics and the latest releases for streaming."/>
+<meta name="keywords" content="Free movies, Watch free TV series, Online streaming, Movie genres, Latest releases, Classic films"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<title>Adult</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    <!-- Meta Tags for SEO -->
-    <meta name="description" content="Watch anime online in HD for FREE on Anime-X. Stream your favorite anime series and movies without any subscription." />
-    <meta name="keywords" content="anime, watch anime, free anime, anime online, HD anime, anime streaming" />
-    <meta name="author" content="Anime-X" />
+  .player-container {
+    margin: 20px;
+    width: 100%;
+    max-width: 800px;
+  }
 
-    <!-- Open Graph Tags for Social Media Sharing -->
-    <meta property="og:title" content="Anime-X - Watch Anime Online in HD for FREE" />
-    <meta property="og:description" content="Watch anime online in HD for FREE on Anime-X. Stream your favorite anime series and movies without any subscription." />
-    <!--<meta property="og:image" content="/logo.png" />-->
-    <meta property="og:url" content="https://anime-x.top" />
-    <meta property="og:type" content="website" />
+  iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  }
 
-    <!-- Twitter Card Tags for Twitter Sharing -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Anime-X - Watch Anime Online in HD for FREE" />
-    <meta name="twitter:description" content="Watch anime online in HD for FREE on Anime-X. Stream your favorite anime series and movies without any subscription." />
-    <!--<meta name="twitter:image" content="/logo.png" />-->
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Baloo+2:wght@400;700&family=Luckiest+Guy&family=Righteous&family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet">
+  .playlist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+  }
 
-    <!-- Link Preloading -->
-    <link rel="preload" href="style.css" as="style">
-    <link rel="preload" href="/assets/kanime.css" as="style">
-    <link rel="preload" href="/assets/kanime.js" as="script">
+  .playlist-item {
+    cursor: pointer;
+    text-align: center;
+    margin: 10px;
+    background-color: #1e1e1e;
+    padding: 10px;
+    border-radius: 10px;
+    width: 120px;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+  }
 
-    <!-- Scripts and Styles -->
-    <script type="module" crossorigin src="/assets/kanime.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/kanime.css">
+  .playlist-item:hover {
+    background-color: #333333;
+    transform: scale(1.05);
+  }
+
+  .playlist-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  }
+
+  .spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+    margin: auto;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @media (max-width: 768px) {
+    iframe {
+      height: 300px;
+    }
+
+    .playlist-item {
+      width: 100px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    iframe {
+      height: 250px;
+    }
+
+    .playlist {
+      gap: 10px;
+    }
+
+    .playlist-item {
+      width: 90px;
+    }
+  }
+</style>
 </head>
 <body>
-    <div id="root"></div>
-<script type='text/javascript' src='//perilastronaut.com/eb/9e/b6/eb9eb684f98ccfb56604fe8d987893c2.js'></script>
+  <div class="terra">
+    <script type="text/javascript">
+      atOptions = {
+        'key' : '29a679982b44db55fa95b90dfb3fac2f',
+        'format' : 'iframe',
+        'height' : 50,
+        'width' : 320,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="//perilastronaut.com/29a679982b44db55fa95b90dfb3fac2f/invoke.js"></script>
+  </div>
+  <div class="terra">
+    <script type="text/javascript">
+      atOptions = {
+        'key' : '31659dfd382d23627d3b20f3dae9ec68',
+        'format' : 'iframe',
+        'height' : 90,
+        'width' : 728,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="//perilastronaut.com/31659dfd382d23627d3b20f3dae9ec68/invoke.js"></script></div>
+  <div id="mainPlayerSection" class="player-container">
+    <iframe id="mainPlayer" src="" title="Video player" allowfullscreen></iframe>
+  </div>
+  <div class="glowing-text-container">
+  If videos doesn't play,</br>
+  try using VPN!</br>
+  </div>
+  <div class="playlist" id="playlist"></div>
+
+  <script>
+  async function loadVideos() {
+    const response = await fetch('videos.json');
+    let videos = await response.json();
+
+    // Shuffle the array using Fisher-Yates algorithm
+    for (let i = videos.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [videos[i], videos[j]] = [videos[j], videos[i]];
+    }
+
+    // Pick the first video from the shuffled list as the main video
+    const randomVideo = videos[0];
+    const mainPlayer = document.getElementById('mainPlayer');
+    mainPlayer.src = randomVideo.link;
+
+    const playlist = document.getElementById('playlist');
+    const placeholderImage = 'https://placehold.co/600x400?text=No+Poster';
+
+    // Render the shuffled playlist
+    playlist.innerHTML = videos.map(video => `
+      <div class="playlist-item" onclick="changeVideo('${video.link}')">
+        <div class="spinner" style="display: none;" id="spinner-${video.link}"></div>
+        <img src="${video.thumbnail}" alt="Video thumbnail"
+             loading="lazy"
+             onerror="this.src='${placeholderImage}'"
+             onload="document.getElementById('spinner-${video.link}').style.display = 'none';">
+      </div>
+    `).join('');
+  }
+
+  function changeVideo(link) {
+    const mainPlayer = document.getElementById('mainPlayer');
+    mainPlayer.src = link;
+
+    // Scroll the page to the player
+    const mainPlayerSection = document.getElementById('mainPlayerSection');
+    mainPlayerSection.scrollIntoView({
+      behavior: 'smooth', // Smooth scroll
+      block: 'start' // Align with the top of the viewport
+    });
+  }
+
+  loadVideos();
+  </script>
 </body>
 </html>
