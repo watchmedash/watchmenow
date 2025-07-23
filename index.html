@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title with keywords -->
+    <title>Dashtoons - Free Manga, Manhwa, and Comics Online</title>
+
+    <!-- Meta description for SEO -->
+    <meta name="description" content="Read your favorite manga and manhwa for free on Dashtoons. Explore a vast collection of comics, including the latest releases and classic favorites.">
+
+    <!-- Keywords for SEO -->
+    <meta name="keywords" content="manga, manhwa, comics, read manga online, free manga, free manhwa, comic site, latest manga releases, manga collection">
+
+    <!-- Author and copyright -->
+    <meta name="author" content="Dashtoons">
+    <meta name="copyright" content="2024 Dashtoons">
+
+    <!-- Open Graph meta tags for social media -->
+    <meta property="og:title" content="Dashtoons - Free Manga, Manhwa, and Comics Online">
+    <meta property="og:description" content="Discover and read your favorite manga and manhwa for free on Dashtoons. Enjoy a vast selection of comics and stay updated with the latest chapters.">
+    <meta property="og:image" content="https://i.postimg.cc/NM4kLqv2/favicon.png">
+    <meta property="og:url" content="https://dashtoons.xyz">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dashtoons - Free Manga, Manhwa, and Comics Online">
+    <meta name="twitter:description" content="Read your favorite manga and manhwa for free on Dashtoons. Explore a vast collection of comics.">
+    <meta name="twitter:image" content="https://i.postimg.cc/NM4kLqv2/favicon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="https://i.postimg.cc/NM4kLqv2/favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=66c597e8260e03001afdc214&product=sop' async='async'></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2101632572509071" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<header>
+<nav>
+<div class="logo-title-container">
+<div class="logo-container">
+<img src="https://i.postimg.cc/1tzJpjzn/Dash-Toons.png" alt="Dashtoons Logo">
+</div>
+<div class="nav-title">
+<h1>Dashtoons</h1>
+<p>Comics Gateway</p>
+</div>
+</div>
+<div class="nav-links">
+<ul>
+<li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+<li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+</ul>
+</div>
+</nav>
+<!--<div class="new-banner">
+    <p>We have an Android APP!!!</p>
+    <p><a href="https://play.google.com/store/apps/details?id=com.dashtroyer.dashtoons">Download Here!</a> 🔥🔥🔥</p>
+</div>-->
+</header>
+
+<script>
+    // Check the current domain
+    if (window.location.hostname === "dashtoons.xyz") {
+        document.addEventListener("DOMContentLoaded", function () {
+            // Create the modal container
+            const modal = document.createElement("div");
+            modal.style.position = "fixed";
+            modal.style.top = "50%";
+            modal.style.left = "50%";
+            modal.style.transform = "translate(-50%, -50%)";
+            modal.style.width = "80%";
+            modal.style.maxWidth = "600px";
+            modal.style.padding = "20px";
+            modal.style.backgroundColor = "#2a2a2a"; // Dark neutral background
+            modal.style.color = "#e0e0e0"; // Neutral gray text
+            modal.style.boxShadow = "0 0 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.5)"; // Subtle glow
+            modal.style.borderRadius = "10px";
+            modal.style.textAlign = "center";
+            modal.style.zIndex = "1000";
+            modal.style.fontFamily = "'Orbitron', sans-serif";
+
+            // Add the announcement text
+            const message = document.createElement("p");
+            message.style.margin = "0";
+            message.style.fontSize = "1.2rem";
+            message.innerHTML = "Please update your app or use DASHTOONS.TOP";
+            modal.appendChild(message);
+
+            // Add the modal to the document body
+            document.body.appendChild(modal);
+
+            // Add a semi-transparent background overlay
+            const overlay = document.createElement("div");
+            overlay.style.position = "fixed";
+            overlay.style.top = "0";
+            overlay.style.left = "0";
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.backgroundColor = "rgba(0, 0, 0, 0.9)"; // Dark overlay
+            overlay.style.zIndex = "999";
+
+            // Append overlay to the body
+            document.body.appendChild(overlay);
+        });
+    }
+</script>
+
+
+
+<div class="image-contained"><a href="https://dash-tv.com/">
+<img loading="lazy" data-src="https://i.postimg.cc/wBNdfBt9/dashflixgif.gif" alt="dashflix">
+</a></div>
+<div class="search-container">
+<form>
+<input type="text" id="searchInput" placeholder="Search Title..." autocomplete="off">
+<button type="submit"><i class="fas fa-search"></i></button>
+</form>
+<div id="searchResults"></div>
+</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script>
+async function loadGallery() {
+  try {
+    const response = await fetch('gallery1.json'); // Path to your JSON file
+    const items = await response.json();
+
+    // Function to shuffle an array
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    // Shuffle the items array
+    const shuffledItems = shuffle(items);
+
+    const galleryContainer = document.getElementById('ballery');
+    galleryContainer.innerHTML = shuffledItems.map(item => `
+      <figure class="item">
+        <a href="${item.link}">
+          <div class="spinner"></div>
+          <img loading="lazy" src="${item.image}" alt="${item.alt}" height="160" width="120"
+               onerror="this.src='https://cinemojo.netlify.app/assets/no-poster-fallback-96ee2340.png';">
+          ${item.chapter ? `<div class="chapter">${typeof item.chapter === 'string' ? item.chapter : `${item.chapter}`}</div>` : ''}
+          <figcaption>${item.title}</figcaption>
+        </a>
+      </figure>
+    `).join('');
+  } catch (error) {
+    console.error('Error loading gallery:', error);
+  }
+}
+loadGallery();
+</script>
+<div class="gallery" id="ballery"></div>
+<script>
+async function loadGallery() {
+  try {
+    const response = await fetch('gallery.json'); // Path to your JSON file
+    const items = await response.json();
+
+    // Function to shuffle an array
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+
+    const shuffledItems = shuffle(items);
+
+    const galleryContainer = document.getElementById('gallery');
+    galleryContainer.innerHTML = shuffledItems.map(item => `
+      <figure class="item">
+        <a href="${item.link}">
+          <div class="spinner"></div>
+          <img loading="lazy" src="${item.image}" alt="${item.alt}" height="160" width="120"
+               onerror="this.src='https://cinemojo.netlify.app/assets/no-poster-fallback-96ee2340.png';">
+          <div class="chapter">${item.chapter}</div>
+          <figcaption>${item.title}</figcaption>
+        </a>
+      </figure>
+    `).join('');
+  } catch (error) {
+    console.error('Error loading gallery:', error);
+  }
+}
+
+loadGallery();
+</script>
+<div class="gallery" id="gallery"></div>
+
+<div class="image-contained"><a href="https://dashflix.site/">
+<img loading="lazy" data-src="https://i.postimg.cc/wBNdfBt9/dashflixgif.gif" alt="Dashflix">
+</a></div>
+
+<footer>
+<nav class="footer-nav">
+<ul class="footer-links">
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="Privacy Policy.html">Privacy Policy</a></li>
+</ul>
+<div class="social-icons">
+<a href="https://perilastronaut.com/ig3edi6zr?key=64ee28d30430f6d5d5a59dadca80b270" class="social-icon"><i class="fab fa-instagram"></i></a>
+<a href="https://perilastronaut.com/ig3edi6zr?key=64ee28d30430f6d5d5a59dadca80b270" class="social-icon"><i class="fab fa-youtube"></i></a>
+<a href="https://perilastronaut.com/ig3edi6zr?key=64ee28d30430f6d5d5a59dadca80b270" class="social-icon"><i class="fab fa-facebook"></i></a>
+<a href="https://perilastronaut.com/ig3edi6zr?key=64ee28d30430f6d5d5a59dadca80b270" class="social-icon"><i class="fab fa-twitter"></i></a>
+</div>
+</nav>
+<p class="copyright">Dashtoons 2024. All rights reserved.</p>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="homepage.js"></script>
+<script src="lazy.js"></script>
+<script src="script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const lazyImages = document.querySelectorAll('img[data-src]');
+
+    const lazyLoad = (image) => {
+        image.src = image.dataset.src;
+        image.onload = () => {
+            image.previousElementSibling.style.display = 'none'; // Hide the spinner
+        };
+    };
+
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                lazyLoad(entry.target);
+                observer.unobserve(entry.target); // Stop observing the image
+            }
+        });
+    });
+
+    lazyImages.forEach(image => {
+        imageObserver.observe(image); // Observe each lazy image
+    });
+});
+
+</script>
+</body>
+</html>
